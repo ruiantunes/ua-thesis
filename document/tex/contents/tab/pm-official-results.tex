@@ -1,0 +1,60 @@
+\begingroup
+
+\setlength\tabcolsep{4.7pt}
+
+\newcommand{\minorsmall}{\fontsize{10.5pt}{12.6pt}\selectfont}
+
+\begin{table}[!t]
+
+\caption%
+[Official results of the Precision Medicine track.]%
+{Official results of the Precision Medicine track retrieved from the overview paper prepared by the challenge organizers \parencite{dogan2019a}. Results are evaluated on the Precision Medicine test set.}
+\label{tab:pm-official-results}
+
+\centering
+
+% \large
+% \normalsize
+% \small
+\minorsmall
+
+% \begin{tabular}{T{4mm}E{45mm}E{14mm}T{24mm}T{14mm}T{12mm}T{14mm}}
+\begin{tabular}{T{4mm}E{43mm}E{14mm}T{28mm}T{14mm}T{11mm}T{13mm}}
+
+\toprule
+
+R* & \multicolumn{2}{l}{Work} & Average precision & Precision & Recall & F1-score\\
+
+\midrule
+
+% 1.  Team 418
+% 2.  Team 421
+% 3.  Team 374 (ours)
+% 4.  Team 419
+% 5.  Team 433
+% 6.  Team 420
+% 7.  Team 375
+% 8.  Team 414
+% 9.  Team 405
+% 10. Team 379
+
+1  & \multicolumn{2}{l}{\textcite{fergadis2017a}} & 0.7158 & 0.6289 & 0.7656 & 0.6906\\
+2  & \multicolumn{2}{l}{\textcite{luo2017c}}      & 0.7253 & 0.6073 & 0.7997 & 0.6904\\
+3  & \textcite{matos2017a}       & System 2       & 0.6677 & 0.5700 & 0.8736 & 0.6898\\
+   & (ours)                      & System 1       & 0.6616 & 0.5864 & 0.8338 & 0.6886\\
+   &                             & System 3       & 0.6929 & 0.6070 & 0.7898 & 0.6864\\
+4  & \multicolumn{2}{l}{\textcite{chen2017c}}     & 0.5797 & 0.5713 & 0.8253 & 0.6752\\
+5  & \multicolumn{2}{l}{\textcite{qu2017a}}       & 0.6632 & 0.5413 & 0.8835 & 0.6713\\
+6  & \multicolumn{2}{l}{\textcite{tran2017a}}     & 0.6439 & 0.5438 & 0.8736 & 0.6703\\
+7  & \multicolumn{2}{l}{\textcite{chen2017d}}     & 0.6744 & 0.5361 & 0.8849 & 0.6677\\
+8  & \multicolumn{2}{l}{\textcite{altinel2017a}}  & 0.5077 & 0.5022 & 0.9801 & 0.6641\\
+9  & \multicolumn{2}{l}{Team 405}                 & 0.5871 & 0.5484 & 0.5710 & 0.5595\\
+10 & \multicolumn{2}{l}{\textcite{wang2017h}}     & 0.4904 & 0.4649 & 0.3480 & 0.3981\\
+
+\bottomrule
+
+\multicolumn{7}{E{143mm}}{* R: rank. Teams ranked according to the F1-score evaluation.}
+
+\end{tabular}
+\end{table}
+\endgroup

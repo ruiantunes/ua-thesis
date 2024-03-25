@@ -1,0 +1,45 @@
+\begingroup
+%\renewcommand*{\arraystretch}{1.1}
+\begin{table}[!t]
+
+\centering
+
+% \tiny
+% \scriptsize
+% \footnotesize
+% \small
+
+\caption{System parameters for the ChemProt relation extraction task.}
+\label{tab:chemprot-parameters}
+
+\begin{tabular}{D{59mm}G{66mm}}
+
+\toprule
+
+Gaussian noise standard deviation & 0.01\\
+LSTM units                        & 128\\
+LSTM recurrent dropout            & 0.4\\
+LSTM dropout                      & 0.4\\
+Convolution filters               & 64\\
+Convolution window sizes          & [3, 4, 5]\\
+Dropout rate                      & 0.4\\
+
+\midrule
+
+Optimizer & RMSprop \parencite{hinton2012a}\\
+Loss      & Categorical cross entropy\\
+
+\midrule
+
+Batch size               & 128\\
+Maximum number of epochs & 500\\
+Early stopping patience  & 30\\
+Early stopping monitor   & Validation micro F1-score\\
+Validation split         & 0.3\\
+
+\bottomrule
+
+\end{tabular}
+
+\end{table}
+\endgroup

@@ -1,0 +1,50 @@
+\begingroup
+
+% \renewcommand*{\arraystretch}{1.5}
+\setlength\tabcolsep{4.2pt}
+
+% \newcommand{\minorfootnotesize}{\fontsize{9.5pt}{11.4pt}\selectfont}
+\newcommand{\minorfootnotesize}{\fontsize{9.4pt}{11.28pt}\selectfont}
+% \newcommand{\minorfootnotesize}{\fontsize{9.0pt}{10.8pt}\selectfont}
+
+\begin{table}[!t]
+
+\caption%
+[Overall averaged F1-scores in the 2018 \as{n2c2} Track~1 dataset with classifiers trained with 100~additional `met' training \as{mimic}-III reports.]%
+{Overall averaged F1-scores in the 2018 \as{n2c2} Track~1 dataset with classifiers trained with 100~additional `met' training \as{mimic}-III reports. The highest value for each tag and subset is highlighted in bold. Ada: \textsf{AdaBoostClassifier}. Bag: \textsf{BaggingClassifier}. DT: \textsf{DecisionTreeClassifier}. GB: \textsf{GradientBoostingClassifier}. XGB: \textsf{XGBClassifier}.}
+\label{tab:2018-n2c2-results-mimic100p}
+
+\centering
+
+% \small
+% \footnotesize
+\minorfootnotesize
+% \scriptsize
+% \minorscriptsize
+% \tiny
+
+\begin{tabular}{lrrrrrrrrrr}
+
+\toprule
+
+Tag & \multicolumn{5}{l}{Evaluation on the training set} & \multicolumn{5}{l}{Evaluation on the test set}\\
+
+\cmidrule(r{0.25em}){1-1}\cmidrule(l{0.25em}r{0.25em}){2-6}\cmidrule(l{0.25em}){7-11}
+
+& Ada & Bag & DT & GB & XGB & Ada & Bag & DT & GB & XGB\\
+
+% \midrule
+
+\textsf{ABDOMINAL}      & \textbf{0.6669} & 0.5890          & 0.6075 & 0.6655          & 0.6581 & 0.7511          & \textbf{0.7617} & 0.6595          & 0.7352          & 0.7507\\
+\textsf{ALCOHOL-ABUSE}  & 0.6729          & \textbf{0.7949} & 0.7040 & 0.7040          & 0.7159 & \textbf{0.5753} & 0.4911          & 0.4819          & 0.4911          & 0.4911\\
+\textsf{ASP-FOR-MI}     & \textbf{0.5848} & 0.5365          & 0.4976 & 0.4951          & 0.4873 & 0.4673          & 0.5232          & \textbf{0.5784} & 0.4788          & 0.4379\\
+\textsf{DIETSUPP-2MOS}  & 0.6977          & 0.6781          & 0.6219 & \textbf{0.7335} & 0.7106 & 0.6012          & 0.6007          & 0.5697          & 0.6510          & \textbf{0.6977}\\
+\textsf{DRUG-ABUSE}     & \textbf{0.7228} & 0.7093          & 0.6456 & 0.6962          & 0.7093 & \textbf{0.7440} & 0.6910          & 0.6601          & 0.6815          & \textbf{0.7440}\\
+\textsf{MAJOR-DIABETES} & 0.7335          & 0.7214          & 0.6231 & \textbf{0.7537} & 0.7489 & 0.7790          & 0.6512          & 0.7089          & \textbf{0.8372} & 0.8140\\
+\textsf{MI-6MOS}        & 0.6930          & \textbf{0.7023} & 0.7020 & 0.6842          & 0.6842 & \textbf{0.4724} & \textbf{0.4724} & 0.4625          & \textbf{0.4724} & \textbf{0.4724}\\
+
+\bottomrule
+
+\end{tabular}
+\end{table}
+\endgroup

@@ -1,0 +1,65 @@
+\begingroup
+% \normalfont
+% \color{black}
+
+\newcommand{\z}{\hspace*{1em}}
+\newcommand{\minorsmall}{\fontsize{10.5pt}{12.6pt}\selectfont}
+\newcommand{\minorfootnotesize}{\fontsize{9.7pt}{11.64pt}\selectfont}
+
+\begin{table}[!tb]
+
+\caption[Datasets for biomedical word sense disambiguation.]{Datasets for biomedical word sense disambiguation, presented in chronological order. MSH: Medical Subject Headings. NLM: National Library of Medicine. UMLS: Unified Medical Language System. UMN: University of Minnesota. VUH: Vanderbilt University Hospital. WSD: word sense disambiguation.}
+\label{tab:wsd-datasets}
+
+\centering
+
+\begin{tabular}{E{0.30\textwidth}p{0.62\textwidth}}
+
+\toprule
+
+% \textbf{Resource} & \textbf{Description}\\
+Resource & Description\\
+
+\midrule
+
+NLM WSD test collection\newline
+\z{\minorsmall\parencite{weeber2001a}}
+&
+A collection comprising 50~ambiguous terms with a total of 5000 disambiguated instances. Abstracts from the 1998 MEDLINE citations were used. The terms were mapped to the 1999 version of the UMLS.\newline
+{\minorfootnotesize\url{https://lhncbc.nlm.nih.gov/ii/areas/WSD/original.html}}
+\\
+
+\midrule
+
+MSH WSD dataset\newline
+\z{\minorsmall\parencite{jimenoyepes2011a}}
+&
+A dataset containing 203 ambiguous terms with a total of 37\,888 ambiguity instances retrieved from the 2010 MEDLINE. The 2009AB UMLS version was used to map the terms.\newline
+{\minorfootnotesize\url{https://lhncbc.nlm.nih.gov/ii/areas/WSD/collaboration.html}}
+\\
+
+\midrule
+
+VUH admission notes\newline
+\z{\minorsmall\parencite{wu2013a,wu2015a}}\newline
+\z{\minorsmall\parencite{wang2016b,wang2018j}}
+&
+It contains 25 ambiguous abbreviations, from clinical admission notes, with up to 200 sentences containing each abbreviation. These were randomly selected and manually annotated by experts.
+\\
+
+\midrule
+
+UMN clinical notes\newline
+\z{\minorsmall\parencite{moon2014a}}\newline
+\z{\minorsmall\parencite{wu2015a}}\newline
+\z{\minorsmall\parencite{wang2016b}}
+&
+A dataset containing 75 acronyms and abbreviations (short forms) with their possible senses (long forms). Senses of each ambiguous term were manually annotated from 500 random instances and matched with the 2011AB UMLS version.\newline
+{\minorfootnotesize\url{https://hdl.handle.net/11299/137703}}
+\\
+
+\bottomrule
+
+\end{tabular}
+\end{table}
+\endgroup

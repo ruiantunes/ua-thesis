@@ -1,0 +1,35 @@
+%
+% Presentation typeset with LaTeX.
+%
+% Copyright (c) 2022, 2023 Rui Antunes
+% https://github.com/ruiantunes/ua-thesis
+%
+
+\input{tex/config/init.tex}
+
+\documentclass[11pt,aspectratio=169]{beamer}
+
+\input{tex/config/packages.tex}
+\input{tex/config/theme.tex}
+\input{tex/config/colors.tex}
+\input{tex/config/commands.tex}
+
+\begin{document}
+
+\input{tex/config/formatting.tex}
+
+\input{tex/contents/cover.tex}
+\input{tex/contents/outline.tex}
+
+\input{tex/contents/sections/01-introduction.tex}
+\input{tex/contents/sections/02-biomedical-text-classification.tex}
+\input{tex/contents/sections/03-biomedical-word-sense-disambiguation.tex}
+\input{tex/contents/sections/04-biomedical-relation-extraction.tex}
+\input{tex/contents/sections/05-final-remarks.tex}
+
+\input{tex/contents/acknowledgments.tex}
+
+\input{tex/contents/cover.tex}
+% \input{tex/contents/blank.tex}
+
+\end{document}

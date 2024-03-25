@@ -1,0 +1,41 @@
+\begingroup
+% \newcommand{\z}{\hphantom{0}}
+
+\begin{table}[!tb]
+
+\caption%
+[Five-fold cross-validation results on the Precision Medicine training set with classical and deep learning classifiers.]%
+{Five-fold cross-validation results on the Precision Medicine training set with classical and deep learning classifiers. The highest F1-score is highlighted in bold. k-NN: k-nearest neighbors. LR: logistic regression. MLP: multi-layer perceptron.}
+\label{tab:pm-cv-results}
+
+\centering
+
+% \small
+% \normalsize
+% \large
+
+\begin{tabular}{E{40mm}T{19mm}T{19mm}T{19mm}}
+
+\toprule
+
+& Precision & Recall & F1-score\\
+
+\midrule
+
+\multicolumn{4}{l}{\textit{Classical classifiers}}\\
+
+\qquad k-NN (k=99) & 0.618 & 0.553 & 0.582\\
+\qquad LR          & 0.674 & 0.546 & 0.603\\
+\qquad MLP         & 0.606 & 0.578 & 0.592\\[4pt]
+
+\multicolumn{4}{l}{\textit{Deep learning classifiers}}\\
+
+\qquad System 1 & 0.637 & 0.681 & 0.651\\
+\qquad System 2 & 0.640 & 0.692 & 0.664\\
+\qquad System 3 & 0.698 & 0.735 & \textbf{0.715}\\
+
+\bottomrule
+
+\end{tabular}
+\end{table}
+\endgroup

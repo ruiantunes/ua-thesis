@@ -1,0 +1,48 @@
+\begingroup
+% \renewcommand*{\arraystretch}{1.1}
+
+\newcommand{\z}{\hphantom{0}}
+
+\begin{table}[!tb]
+
+\centering
+% \tiny
+% \scriptsize
+\footnotesize
+% \small
+
+\caption%
+[Performance comparison of WSD systems using supervised and knowledge-based methods in the MSH WSD dataset.]%
+{Performance comparison of \as{wsd} systems using supervised and knowledge-based methods in the MSH WSD dataset. Macro-accuracy is the evaluation metric.}
+\label{tab:wsd-comparison}
+
+\begin{tabular}{D{4.9cm}D{5.9cm}G{0.9cm}G{0.9cm}}
+
+\toprule
+
+Work* & Approach & S\textsuperscript{†} & KB\textsuperscript{†}\\
+
+\midrule
+
+\textcite{zhang2019n}         & Long short-term memory networks & 0.9600 & -\\
+\textcite{pesaranghader2019a} & Long short-term memory networks & 0.9682 & 0.9267\\
+\textcite{duque2018a}         & Co-occurrence graph & - & 0.7152\\
+Ours \parencite{antunes2017c} & Word embeddings, cosine similarity & 0.9557 & 0.8744\\
+\textcite{jimenoyepes2017a}   & Support vector machine & 0.9597 & -\\
+\textcite{sabbir2016a}        & Word embeddings, k-nearest neighbors & - & 0.9434\\
+\textcite{tulkens2016a}       & Word embeddings, cosine similarity & - & 0.84\z\z\\
+\textcite{jimenoyepes2015a}   & Word--concept statistical model & 0.930\z & 0.891\z\\
+\textcite{mcinnes2014a}       & Semantic similarity measures & 0.97\z\z & 0.78\z\z\\
+\textcite{mcinnes2013a}       & Semantic similarity measures & - & 0.75\z\z\\
+\textcite{garla2013a}         & Semantic similarity measures & - & 0.8071\\
+\textcite{jimenoyepes2011a}   & Naive Bayes classifier & 0.9386 & 0.8383\\
+
+\bottomrule
+
+\multicolumn{4}{D{14.4cm}}{* Works sorted in reverse chronological order.}\\
+\multicolumn{4}{D{14.4cm}}{\textsuperscript{†} S: supervised. KB: knowledge-based. Distinct authors report results with different decimal places. Also, some results are not directly comparable because different strategies and dataset splits---for example, different number of folds in cross-validation---have been used for evaluation.}
+
+\end{tabular}
+
+\end{table}
+\endgroup

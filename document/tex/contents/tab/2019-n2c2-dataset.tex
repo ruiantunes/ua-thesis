@@ -1,0 +1,47 @@
+\begingroup
+\newcommand{\z}{\hphantom{]}}
+
+% \renewcommand{\arraystretch}{1.4}
+
+\begin{table}[!tb]
+
+\caption%
+[Statistics of the 2019 \as{n2c2}/\as{ohnlp} Track~1 dataset detailing the number of pairs for different levels of similarity.]%
+{Statistics of the 2019 \as{n2c2}/\as{ohnlp} Track~1 dataset detailing the number of pairs for different levels of similarity. N: number of sentence pairs.}%
+\label{tab:2019-n2c2-dataset}
+
+\centering
+
+% \small
+% \footnotesize
+% \scriptsize
+% \tiny
+
+\begin{tabular}{lE{0mm}rE{0mm}rrrrr}
+
+\toprule
+
+Set & & \multicolumn{1}{l}{N} & & \multicolumn{5}{l}{Similarity scores}\\
+
+% \midrule
+% \cmidrule(r){1-1}\cmidrule(lr){2-2}\cmidrule(l){3-7}
+\cmidrule{1-1}\cmidrule{3-3}\cmidrule{5-9}
+
+& & & & [0, 1] & ]1, 2] & ]2, 3] & ]3, 4] & ]4, 5]\\
+
+% \midrule
+
+Training & & 1642 & & 312\z & 154\z & 394\z & 509\z & 273\z\\
+Test     & &  412 & & 238\z &  46\z &  32\z &  62\z &  34\z\\
+
+% \midrule
+% \cmidrule(r){1-1}\cmidrule(lr){2-2}\cmidrule(l){3-7}
+\cmidrule{1-1}\cmidrule{3-3}\cmidrule{5-9}
+
+Total    & & 2054 & & 550\z & 200\z & 426\z & 571\z & 307\z\\
+
+\bottomrule
+
+\end{tabular}
+\end{table}
+\endgroup

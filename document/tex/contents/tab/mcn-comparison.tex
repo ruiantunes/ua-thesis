@@ -1,0 +1,41 @@
+\begingroup
+% \renewcommand*{\arraystretch}{1.1}
+
+\begin{table}[!tb]
+
+\centering
+% \tiny
+% \scriptsize
+\footnotesize
+% \small
+
+\caption[Performance of the top-performing teams in the 2019 n2c2/UMass Lowell Track 3.]{Performance of the top-performing teams in the 2019 \as{n2c2}/UMass Lowell Track 3. Accuracy is the evaluation metric. This table is adapted from \textcite{luo2020b}.}
+\label{tab:mcn-comparison}
+
+\begin{tabular}{G{0.8cm}D{1.7cm}D{6.6cm}G{1.4cm}}
+
+\toprule
+
+Rank & Team name & System brief description & Accuracy\\
+
+\midrule
+
+ 1 & TTI                               & Cascading dictionary matching, deep learning  & 0.8526\\
+ 2 & KP                                & Cascading dictionary matching & 0.8194\\
+ 3 & UAZ                               & Cascading dictionary matching & 0.8166\\
+ 4 & Ali                               & Retrieval, machine learning & 0.8105\\
+ 5 & MDQ                               & Retrieval, machine learning & 0.8101\\
+ 6 & UWM                               & Cascading dictionary matching & 0.8079\\
+ 7 & UAv (ours)                        & Cosine similarity & 0.8013\\
+ 8 & ezDI                              & Cascading dictionary matching & 0.8006\\
+ 9 & MIT                               & Cascading dictionary matching & 0.7961\\
+10 & NaCT                              & Cascading dictionary matching & 0.7957\\
+
+\bottomrule
+
+\multicolumn{4}{D{12.2cm}}{\footnotesize Ali: Alibaba; ezDI: ezDI, Inc; KP: Kaiser Permanente; MDQ: Med Data Quest, Inc; MIT: Massachusetts Institute of Technology; NaCT: National Centre for Text Mining; TTI: Toyota Technological Institute; UAv: University of Aveiro; UAZ: University of Arizona; UWM: University of Wisconsin-Milwaukee.}
+
+\end{tabular}
+
+\end{table}
+\endgroup

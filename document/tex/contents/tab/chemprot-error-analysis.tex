@@ -1,0 +1,62 @@
+\begingroup
+
+%\renewcommand*{\arraystretch}{1.1}
+\setlength\tabcolsep{0.010\textwidth}
+\newcommand{\minorfootnotesize}{\fontsize{9.5pt}{11.4pt}\selectfont}
+
+% https://tex.stackexchange.com/questions/74459/remove-space-before-colorbox
+\newcommand{\reducedstrut}{\vrule width 0pt height .6\ht\strutbox depth .6\dp\strutbox\relax}
+\newcommand{\cb}[2]{\colorbox[RGB]{#1}{\reducedstrut#2}}
+
+\begin{table}[!t]
+
+\centering
+
+% \tiny
+% \scriptsize
+\minorfootnotesize
+% \footnotesize
+% \small
+
+\caption[Error analysis: examples of incorrect predictions in the ChemProt test set obtained by the BiLSTM model (the best in the development set).]%
+{Error analysis: examples of incorrect predictions in the ChemProt test set obtained by the BiLSTM model (the best in the development set). The chemical--protein pairs are presented with information from the sentence and the shortest dependency path (SDP). The chemical and protein named entities are annotated in \cb{195,195,195}{dark-gray} and \cb{225,225,225}{light-gray} colored boxes, respectively. For simplicity, the chemical and gene placeholders were omitted in the list of words from the SDP. Sentences are from PMIDs 23265901, 17082235, 10611634, 10909982, 10701840, and 12897749.}
+\label{tab:chemprot-error-analysis}
+
+\setlength{\fboxsep}{1pt}
+
+\begin{tabular}{E{12mm}E{16mm}E{15mm}E{68mm}E{24mm}}
+
+\toprule
+
+\multicolumn{1}{E{12mm}}{Example} & Correct & Predicted & Full sentence & Words in the SDP\\
+
+\midrule
+
+1 & Agonist & Activation & The introduction of the \cb{195,195,195}{amino} group resulted in not only improved water solubility but also enhanced \cb{225,225,225}{TLR7} agonistic activity. & group introduction resulted activity\\
+
+\midrule
+
+2 & Agonist & Inhibition & Our work shows that \cb{195,195,195}{sulfonylureas} and glinides additionally bind to PPARgamma and exhibit \cb{225,225,225}{PPARgamma} agonistic activity. & exhibit activity\\
+
+\midrule
+
+3 & Antagonist & Agonist & In guinea pigs, antagonist actions of \cb{195,195,195}{yohimbine} at \cb{225,225,225}{5-HT(1B)} receptors are revealed by blockade of hypothermia evoked by the 5-HT(1B) agonist, GR46,611. & receptors\\
+
+\midrule
+
+4 & Activation & Inhibition & Impaired expression of the uncoupling protein-3 gene in skeletal muscle during lactation: fibrates and \cb{195,195,195}{troglitazone} reverse lactation-induced downregulation of the \cb{225,225,225}{uncoupling protein-3} gene. & reverse downregulation gene\\
+
+\midrule
+
+5 & Inhibition & Activation & \cb{195,195,195}{Geldanamycin} also disrupts the T-cell receptor-mediated activation of \cb{225,225,225}{nuclear factor of activated T-cells} (NF-AT). & disrupts activation\\
+
+\midrule
+
+6 & Substrate & Inhibition & Blockade of \cb{195,195,195}{LTC4} synthesis caused by additive inhibition of \cb{225,225,225}{gIV-PLA2} phosphorylation: Effect of salmeterol and PDE4 inhibition in human eosinophils. & synthesis caused inhibition phosphorylation\\
+
+\bottomrule
+
+\end{tabular}
+
+\end{table}
+\endgroup

@@ -1,0 +1,37 @@
+\begingroup
+
+% \renewcommand*{\arraystretch}{1.3}
+% \setlength\tabcolsep{6pt}
+
+\begin{table}[!t]
+
+\caption%
+[The architecture of the deep learning models used in the patient cohort selection task.]%
+{The architecture of the deep learning models used in the patient cohort selection task. ReLU: rectified linear unit.}
+\label{tab:2018-n2c2-deep-learning}
+
+\centering
+
+% \small
+% \scriptsize
+
+\begin{tabular}{E{72mm}E{62mm}}
+
+\toprule
+
+Model & Structure (top--bottom)\\
+
+\midrule
+
+Fully connected neural network (FCNN) & Embedding layer\newline Flatten layer\newline Dense layer with 128 units\newline ReLU activation\newline Dense layer with 128 units\newline ReLU activation\newline Dropout with rate 0.2\newline Single unit with sigmoid activation\\
+
+\midrule
+
+% Conv1D
+Convolutional neural network (CNN) & Embedding layer\newline Convolutional layer with 128 filters\newline ReLU activation\newline Global max pooling operation\newline Dense layer with 128 units\newline ReLU activation\newline Dropout with rate 0.2\newline Single unit with sigmoid activation\\
+
+\bottomrule
+
+\end{tabular}
+\end{table}
+\endgroup

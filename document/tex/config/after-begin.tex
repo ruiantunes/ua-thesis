@@ -1,0 +1,70 @@
+% Select the language (here and in "packages.tex").
+\input{tex/config/languages/english.tex}
+% \input{tex/config/languages/portuguese.tex}
+
+% To change symbol of itemize (size of bullet).
+\renewcommand*{\labelitemi}{$\vcenter{\hbox{\small$\bullet$}}$}
+
+% Horizontal line to separate floats (figures and tables) from text.
+% \def\topfigrule{\kern 7.8pt \hrule width\textwidth\kern -8.2pt\relax}
+% \def\dblfigrule{\kern 7.8pt \hrule width\textwidth\kern -8.2pt\relax}
+% \def\botfigrule{\kern -7.8pt \hrule width\textwidth\kern 8.2pt\relax}
+
+% To increase vertical line spacing in tables.
+\renewcommand{\arraystretch}{1.2}
+
+% To change column separation in tables.
+% \setlength\tabcolsep{10pt}
+\setlength\tabcolsep{0.02\textwidth}
+
+% New commands.
+
+% https://tex.stackexchange.com/questions/32160/new-line-after-paragraph
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}}
+\newcommand{\mysubparagraph}[1]{\subparagraph{#1}\mbox{}}
+
+% \newcommand{\myrule}{\noindent\rule{\textwidth}{1pt}}
+
+% \makeatletter
+% \newcommand\myfontsize{\f@size pt}
+% \makeatother
+
+% \newcommand{\toadd}{{\color{red}\textbf{To add...}}}
+% \newcommand{\todo}{{\color{red}\textbf{To do...}}}
+% \newcommand{\tomove}{{\color{red}\textbf{To move...}}}
+% \newcommand{\toread}{{\color{red}\textbf{To read...}}}
+% \newcommand{\torewrite}{{\color{red}\textbf{To rewrite...}}}
+
+% \newcommand{\blue}[1]{{\leavevmode\color{blue}#1}}
+% \newcommand{\red}[1]{{\leavevmode\color{red}#1}}
+% \newcommand{\green}[1]{{\leavevmode\color{SpringGreen4}#1}}
+
+% Temporary width.
+% https://texfaq.org/FAQ-findwidth
+\newlength{\mywidth}
+
+% Latin expressions.
+% https://en.wikipedia.org/wiki/List_of_Latin_phrases
+\newcommand{\adhoc}{\emph{ad hoc}}
+\newcommand{\aposteriori}{\emph{a posteriori}}
+\newcommand{\apriori}{\emph{a priori}}
+\newcommand{\cf}{\emph{cf.}}
+\newcommand{\defacto}{\emph{de facto}}
+\newcommand{\eg}{\emph{e.g.}}
+\newcommand{\ergo}{\emph{ergo}}
+\newcommand{\etal}{\emph{et al.}}
+\newcommand{\etc}{\emph{etc}}
+\newcommand{\ie}{\emph{i.e.}}
+\newcommand{\re}{\emph{re}}
+\newcommand{\versus}{\emph{versus}}
+\newcommand{\viceversa}{\emph{vice versa}}
+\newcommand{\viz}{\emph{viz.}}
+\newcommand{\vs}{\emph{vs}}
+
+% To make text never go over the right margin.
+% https://tex.stackexchange.com/questions/9107/how-can-i-make-my-text-never-go-over-the-right-margin-by-always-hyphenating-or-b
+\sloppy
+
+% Disable vertical stretch across the pages.
+% https://tex.stackexchange.com/questions/10743/why-does-latex-stretch-small-sections-across-the-whole-page-vertically
+\raggedbottom

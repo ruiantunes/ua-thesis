@@ -1,0 +1,81 @@
+\begingroup
+
+% \renewcommand*{\arraystretch}{1.5}
+\setlength\tabcolsep{4.1pt}
+
+% \newcommand{\minorscriptsize}{\fontsize{7.0pt}{8.4pt}\selectfont}
+\newcommand{\minorfootnotesize}{\fontsize{9.0pt}{10.8pt}\selectfont}
+
+\begin{table}[!tb]
+
+\caption%
+[Detailed results with a baseline classifier applied to the 2018 \as{n2c2} Track~1 test set.]%
+{Detailed results with a baseline classifier applied to the 2018 \as{n2c2} Track~1 test set. TP: true positive. TN: true negative. FP: false positive. FN: false negative. P:~precision. R: recall. F1: F1-score. MI: micro-averaged. MA: macro-averaged.}%
+\label{tab:2018-n2c2-results-baseline}
+
+\centering
+
+% \small
+% \footnotesize
+\minorfootnotesize
+% \scriptsize
+% \minorscriptsize
+% \tiny
+
+\begin{tabular}{E{6.8mm}T{5mm}T{5mm}T{5mm}T{5mm}T{8mm}T{8mm}T{8mm}T{5mm}T{5mm}T{5mm}T{5mm}T{8mm}T{8mm}T{8mm}T{9mm}}
+
+\toprule
+
+\textbf{Tag}* & \multicolumn{7}{l}{\textbf{Met}} & \multicolumn{7}{l}{\textbf{Not met}} & \textbf{O. F1}\textsuperscript{†}\\
+
+% \cmidrule(r{0.25em}){1-1}\cmidrule(l{0.25em}r{0.25em}){2-8}\cmidrule(l{0.25em}r{0.25em}){9-15}\cmidrule(l{0.25em}){16-16}
+\cmidrule(l{0.25em}r{0.25em}){2-8}\cmidrule(l{0.25em}r{0.25em}){9-15}
+
+& TP & TN & FP & FN & P & R & F1 & TP & TN & FP & FN & P & R & F1 &\\
+
+\midrule
+
+\textsf{ABD} &  0 & 56 &  0 & 30 & 0.0000 & 0.0000 & 0.0000 & 56 &  0 & 30 &  0 & 0.6512 & 1.0000 & 0.7887 & 0.3944\\
+\textsf{ADV} & 45 &  0 & 41 &  0 & 0.5233 & 1.0000 & 0.6870 &  0 & 45 &  0 & 41 & 0.0000 & 0.0000 & 0.0000 & 0.3435\\
+\textsf{ALC} &  0 & 83 &  0 &  3 & 0.0000 & 0.0000 & 0.0000 & 83 &  0 &  3 &  0 & 0.9651 & 1.0000 & 0.9822 & 0.4911\\
+\textsf{ASP} & 68 &  0 & 18 &  0 & 0.7907 & 1.0000 & 0.8831 &  0 & 68 &  0 & 18 & 0.0000 & 0.0000 & 0.0000 & 0.4416\\
+\textsf{CRE} &  0 & 62 &  0 & 24 & 0.0000 & 0.0000 & 0.0000 & 62 &  0 & 24 &  0 & 0.7209 & 1.0000 & 0.8378 & 0.4189\\
+\textsf{DIE} &  0 & 42 &  0 & 44 & 0.0000 & 0.0000 & 0.0000 & 42 &  0 & 44 &  0 & 0.4884 & 1.0000 & 0.6562 & 0.3281\\
+\textsf{DRU} &  0 & 83 &  0 &  3 & 0.0000 & 0.0000 & 0.0000 & 83 &  0 &  3 &  0 & 0.9651 & 1.0000 & 0.9822 & 0.4911\\
+\textsf{ENG} & 73 &  0 & 13 &  0 & 0.8488 & 1.0000 & 0.9182 &  0 & 73 &  0 & 13 & 0.0000 & 0.0000 & 0.0000 & 0.4591\\
+\textsf{HBA} &  0 & 51 &  0 & 35 & 0.0000 & 0.0000 & 0.0000 & 51 &  0 & 35 &  0 & 0.5930 & 1.0000 & 0.7445 & 0.3723\\
+\textsf{KET} &  0 & 86 &  0 &  0 & 0.0000 & 0.0000 & 0.0000 & 86 &  0 &  0 &  0 & 1.0000 & 1.0000 & 1.0000 & 0.5000\\
+\textsf{MAJ} & 43 &  0 & 43 &  0 & 0.5000 & 1.0000 & 0.6667 &  0 & 43 &  0 & 43 & 0.0000 & 0.0000 & 0.0000 & 0.3333\\
+\textsf{MAK} & 83 &  0 &  3 &  0 & 0.9651 & 1.0000 & 0.9822 &  0 & 83 &  0 &  3 & 0.0000 & 0.0000 & 0.0000 & 0.4911\\
+\textsf{MI6} &  0 & 78 &  0 &  8 & 0.0000 & 0.0000 & 0.0000 & 78 &  0 &  8 &  0 & 0.9070 & 1.0000 & 0.9512 & 0.4756\\
+
+% ABDOMINAL       %
+% ADVANCED-CAD    %
+% ALCOHOL-ABUSE   %
+% ASP-FOR-MI      %
+% CREATININE      %
+% DIETSUPP-2MOS   %
+% DRUG-ABUSE      %
+% ENGLISH         %
+% HBA1C           %
+% KETO-1YR        %
+% MAJOR-DIABETES  %
+% MAKES-DECISIONS %
+% MI-6MOS         %
+
+\cmidrule(r{0.25em}){1-1}\cmidrule(l{0.25em}r{0.25em}){2-8}\cmidrule(l{0.25em}r{0.25em}){9-15}\cmidrule(l{0.25em}){16-16}
+
+% \textbf{micro-averaged}
+% \textbf{macro-averaged}
+
+MI & 312 & 541 & 118 & 147 & 0.7256 & 0.6797 & 0.7019 & 541 & 312 & 147 & 118 & 0.7863 & 0.8209 & 0.8033 & 0.7526\\
+MA &     &     &     &     & 0.2791 & 0.3846 & 0.3183 &     &     &     &     & 0.4839 & 0.6154 & 0.5341 & 0.4262\\
+
+\bottomrule
+
+\multicolumn{16}{E{143mm}}{* The names of the tags were abbreviated for conciseness of the table. Please refer to \Cref{tab:2018-n2c2-tags} for consulting the full name forms.}\\
+\multicolumn{16}{E{143mm}}{\textsuperscript{†} The overall F1-score is the average between the F1-scores from the `met' and `not met' classes.}
+
+\end{tabular}
+\end{table}
+\endgroup

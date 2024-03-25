@@ -1,0 +1,67 @@
+\begingroup
+
+% \renewcommand{\arraystretch}{1.4}
+% \renewcommand{\arraystretch}{1.0}
+
+\begin{table}[!tb]
+
+\caption%
+[Examples of clinical sentence pairs and respective similarity scores.]%
+{Examples of clinical sentence pairs and respective similarity scores with explanations from \textcite{wang2018d}.}%
+\label{tab:2019-n2c2-examples}
+
+\centering
+
+% \small
+\footnotesize
+% \scriptsize
+% \tiny
+
+\begin{tabular}{R{8.4mm}E{6.0mm}@{\hskip0pt}E{123mm}}
+
+\toprule
+
+Score & \multicolumn{2}{l}{Examples}\\
+
+\midrule
+
+5 & \multicolumn{2}{E{129mm}}{\textit{The two sentences are completely equivalent, as they mean the same thing.}}\\
+& S1: & Albuterol [PROVENTIL/VENTOLIN] 90 mcg/Act HFA Aerosol 2 puffs by inhalation every 4 h as needed\\
+& S2: & Albuterol [PROVENTIL/VENTOLIN] 90 mcg/Act HFA Aerosol 1-2 puffs by inhalation every 4 h as needed \#1 each\\
+
+&&\\[-10pt]
+
+4 & \multicolumn{2}{E{129mm}}{\textit{The two sentences are mostly equivalent, but some unimportant details differ.}}\\
+& S1: & Discussed goals, risks, alternatives, advanced directives, and the necessity of other members of the surgical team participating in the procedure with the patient\\
+& S2: & Discussed risks, goals, alternatives, advance directives, and the necessity of other members of the healthcare team participating in the procedure with the patient and his mother\\
+
+&&\\[-10pt]
+
+3 & \multicolumn{2}{E{129mm}}{\textit{The two sentences are roughly equivalent, but some important information differs or is missing.}}\\
+& S1: & Cardiovascular assessment findings include heart rate normal, Heart rhythm, atrial fibrillation with controlled ventricular response\\
+& S2: & Cardiovascular assessment findings include heart rate, bradycardic, Heart rhythm, first degree AV Block\\
+
+&&\\[-10pt]
+
+2 & \multicolumn{2}{E{129mm}}{\textit{The two sentences are not equivalent, but share some details.}}\\
+& S1: & Discussed risks, goals, alternatives, advance directives, and the necessity of other members of the healthcare team participating in the procedure with (patient) (legal representative and others present during the discussion)\\
+& S2: & We discussed the low likelihood that a blood transfusion would be required during the postoperative period and the necessity of other members of the surgical team participating in the procedure\\
+
+&&\\[-10pt]
+
+1 & \multicolumn{2}{E{129mm}}{\textit{The two sentences are not equivalent, but are on the same topic.}}\\
+& S1: & No: typical `cold' symptoms; fever present (greater than or equal to 100.4 ºF or 38 ºC) or suspected fever; rash; white patches on lips, tongue or mouth
+(other than throat); blisters in the mouth; swollen or `bull' neck; hoarseness or lost voice or ear pain\\
+& S2: & New wheezing or chest tightness, runny or blocked nose, or discharge down the back of the throat, hoarseness or lost voice\\
+
+&&\\[-10pt]
+
+0 & \multicolumn{2}{E{129mm}}{\textit{The two sentences are completely dissimilar.}}\\
+& S1: & The risks and benefits of the procedure were discussed, and the patient consented to this procedure\\
+& S2: & The content of this note has been reproduced, signed by an authorized physician in the space above, and mailed to the patient's parents, the patient's home care company\\
+
+\bottomrule
+
+\end{tabular}
+\end{table}
+\endgroup

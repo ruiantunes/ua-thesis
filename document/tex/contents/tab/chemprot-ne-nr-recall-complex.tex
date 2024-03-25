@@ -1,0 +1,66 @@
+\begingroup
+
+% \renewcommand*{\arraystretch}{1.1}
+\renewcommand*{\arraystretch}{2.4}
+\setlength\tabcolsep{0.010\textwidth}
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+
+\newcommand{\z}{\hphantom{0}}
+
+\begin{table}[!t]
+
+\centering
+% \color{red}
+% \tiny
+% \scriptsize
+\footnotesize
+% \small
+% \normalsize
+
+\caption[Heatmap representing the recall values obtained by the BiLSTM model (the best in the development set) applied to the ChemProt test set.]%
+{Heatmap representing the recall values obtained by the BiLSTM model (the best in the development set) applied to the ChemProt test set. True positives (TP) and false negatives (FN) are displayed as TP$/$FN. X-axis: number of gold-standard entities per sentence. Y-axis: number of gold-standard evaluated relations per sentence. Axes are truncated for conciseness.}
+\label{tab:chemprot-ne-nr-recall-complex}
+
+\vspace*{-12pt}
+
+\begin{tabular}{G{4mm}G{0mm}|F{11.5mm}F{11.5mm}F{11.5mm}F{11.5mm}F{11.5mm}F{11.5mm}F{11.5mm}F{11.5mm}F{11.5mm}|}
+
+% \toprule
+
+\multicolumn{1}{F{4mm}}{Y} & \multicolumn{1}{c}{} & \multicolumn{9}{c}{X}\\[-4pt]
+
+\cmidrule{1-1}\cmidrule{3-11}
+
+& \multicolumn{1}{c}{} & \raisebox{8pt}{2} & \raisebox{8pt}{3} & \raisebox{8pt}{4} & \raisebox{8pt}{5} & \raisebox{8pt}{6} & \raisebox{8pt}{7} & \raisebox{8pt}{8} & \raisebox{8pt}{9} & \multicolumn{1}{c}{\raisebox{8pt}{10}}\\[-12pt]
+
+\cmidrule{3-11}
+
+{1} & & \cellcolor[rgb]{0.793,0.793,0.793}$148/98$ & \cellcolor[rgb]{0.729,0.729,0.729}$88/\z70$ & \cellcolor[rgb]{0.779,0.779,0.779}$\z62/42$ & \cellcolor[rgb]{0.693,0.693,0.693}$20/19$ & \cellcolor[rgb]{0.736,0.736,0.736}$13/10$ & \cellcolor[rgb]{0.643,0.643,0.643}$\z4/\z7$ & \cellcolor[rgb]{0.679,0.679,0.679}$\z1/\z1$ & \cellcolor[rgb]{0.679,0.679,0.679}$\z4/\z4$ & \cellcolor[rgb]{0.600,0.600,0.600}$\z0/\z1$\\[4pt]
+
+{2} & & & \cellcolor[rgb]{0.757,0.757,0.757}$182/132$ & \cellcolor[rgb]{0.771,0.771,0.771}$121/83$ & \cellcolor[rgb]{0.800,0.800,0.800}$86/50$ & \cellcolor[rgb]{0.743,0.743,0.743}$33/25$ & \cellcolor[rgb]{0.864,0.864,0.864}$29/\z7$ & \cellcolor[rgb]{0.650,0.650,0.650}$\z6/\z8$ & \cellcolor[rgb]{0.664,0.664,0.664}$\z8/10$ & \cellcolor[rgb]{0.614,0.614,0.614}$\z1/\z3$\\[4pt]
+
+{3} & & & & \cellcolor[rgb]{0.714,0.714,0.714}$\z89/76$ & \cellcolor[rgb]{0.686,0.686,0.686}$60/58$ & \cellcolor[rgb]{0.843,0.843,0.843}$36/12$ & \cellcolor[rgb]{0.829,0.829,0.829}$15/\z6$ & \cellcolor[rgb]{0.636,0.636,0.636}$14/28$ & \cellcolor[rgb]{0.836,0.836,0.836}$11/\z4$ & \cellcolor[rgb]{0.814,0.814,0.814}$10/\z5$\\[4pt]
+
+{4} & & & & \cellcolor[rgb]{0.707,0.707,0.707}$\z58/50$ & \cellcolor[rgb]{0.814,0.814,0.814}$96/48$ & \cellcolor[rgb]{0.779,0.779,0.779}$62/42$ & \cellcolor[rgb]{0.814,0.814,0.814}$40/20$ & \cellcolor[rgb]{0.671,0.671,0.671}$17/19$ & \cellcolor[rgb]{0.807,0.807,0.807}$21/11$ & \cellcolor[rgb]{0.900,0.900,0.900}$\z8/\z0$\\[4pt]
+
+{5} & & & & & \cellcolor[rgb]{0.679,0.679,0.679}$\z5/\z5$ & \cellcolor[rgb]{0.821,0.821,0.821}$41/19$ & \cellcolor[rgb]{0.857,0.857,0.857}$52/13$ & \cellcolor[rgb]{0.786,0.786,0.786}$\z6/\z4$ & \cellcolor[rgb]{0.786,0.786,0.786}$\z9/\z6$ & \cellcolor[rgb]{0.857,0.857,0.857}$\z8/\z2$\\[4pt]
+
+{6} & & & & & \cellcolor[rgb]{0.850,0.850,0.850}$50/16$ & \cellcolor[rgb]{0.879,0.879,0.879}$26/\z4$ & \cellcolor[rgb]{0.850,0.850,0.850}$50/16$ & \cellcolor[rgb]{0.764,0.764,0.764}$39/27$ & \cellcolor[rgb]{0.843,0.843,0.843}$\z9/\z3$ & \cellcolor[rgb]{0.607,0.607,0.607}$\z2/10$\\[4pt]
+
+{7} & & & & & & \cellcolor[rgb]{0.621,0.621,0.621}$\z2/\z5$ & \cellcolor[rgb]{0.871,0.871,0.871}$\z6/\z1$ & \cellcolor[rgb]{0.679,0.679,0.679}$14/14$ & \cellcolor[rgb]{0.900,0.900,0.900}$21/\z0$ & \cellcolor[rgb]{0.600,0.600,0.600}$\z0/\z7$\\[4pt]
+
+{8} & & & & & & \cellcolor[rgb]{0.750,0.750,0.750}$32/24$ & \cellcolor[rgb]{0.657,0.657,0.657}$14/18$ & \cellcolor[rgb]{0.629,0.629,0.629}$\z5/11$ & \cellcolor[rgb]{0.721,0.721,0.721}$26/22$ & \cellcolor[rgb]{0.886,0.886,0.886}$14/\z2$\\[4pt]
+
+{9} & & & & & & \cellcolor[rgb]{0.893,0.893,0.893}$17/\z1$ & \cellcolor[rgb]{0.700,0.700,0.700}$14/13$ & $\z0/\z0$ & \cellcolor[rgb]{0.814,0.814,0.814}$18/\z9$ & \cellcolor[rgb]{0.679,0.679,0.679}$\z9/\z9$\\[4pt]
+
+{10} & & & & & & & \cellcolor[rgb]{0.786,0.786,0.786}$\z6/\z4$ & \cellcolor[rgb]{0.900,0.900,0.900}$10/\z0$ & $\z0/\z0$ & \cellcolor[rgb]{0.900,0.900,0.900}$10/\z0$\\[4pt]
+
+\cmidrule{3-11}
+
+% \bottomrule
+
+\end{tabular}
+
+\end{table}
+\endgroup

@@ -1,0 +1,99 @@
+\begingroup
+
+% \renewcommand*{\arraystretch}{1.7}
+% \setlength\tabcolsep{4.6pt}
+\setlength\tabcolsep{5.45pt}
+
+\newcommand{\minorfootnotesize}{\fontsize{9.5pt}{11.4pt}\selectfont}
+% \newcommand{\minorfootnotesize}{\fontsize{9.0pt}{10.8pt}\selectfont}
+
+\begin{table}[!t]
+
+\caption%
+[Overall averaged F1-scores in the 2018 \as{n2c2} Track~1 training and test sets.]%
+{\small%
+Overall averaged F1-scores in the 2018 \as{n2c2} Track~1 training and test sets. The highest value in each row is highlighted in bold. Ada: \textsf{AdaBoostClassifier}. Bag: \textsf{BaggingClassifier}. DT: \textsf{DecisionTreeClassifier}. GB: \textsf{GradientBoostingClassifier}. XGB: \textsf{XGBClassifier}. FCNN: fully connected neural network. CNN: convolutional neural network. RB: rule-based classifier. MRB: modified rule-based classifier.}
+\label{tab:2018-n2c2-results-all}
+
+\centering
+
+% \small
+% \footnotesize
+\minorfootnotesize
+% \scriptsize
+% \minorscriptsize
+% \tiny
+
+\begin{tabular}{lrrrrrrrrr}
+
+\multicolumn{10}{l}{\small (a) Evaluation on the training set.}\\[4pt]
+
+\toprule
+
+Tag & \multicolumn{5}{l}{Classical machine learning} & \multicolumn{2}{l}{Deep learning} & \multicolumn{2}{l}{Rule-based}\\
+
+\cmidrule(r{0.25em}){1-1}\cmidrule(l{0.25em}r{0.25em}){2-6}\cmidrule(l{0.25em}r{0.25em}){7-8}\cmidrule(l{0.25em}){9-10}
+
+& Ada & Bag & DT & GB & XGB & FCNN & CNN & RB & MRB\\
+
+\textsf{ABDOMINAL}       & \textbf{0.6071} & 0.5024 & 0.5281 & 0.5868          & 0.5654 & 0.5717 & 0.4257 &                 &\\
+\textsf{ADVANCED-CAD}    & 0.6780          & 0.6525 & 0.6034 & 0.7208          & 0.7611 & 0.4951 & 0.4977 & \textbf{0.8251} & \textbf{0.8251}\\
+\textsf{ALCOHOL-ABUSE}   & 0.4899          & 0.4912 & 0.4807 & 0.4847          & 0.4912 & 0.4912 & 0.4912 &          0.8598 & \textbf{1.0000}\\
+\textsf{ASP-FOR-MI}      & 0.5144          & 0.4843 & 0.4946 & 0.5025          & 0.4603 & 0.4466 & 0.4466 &          0.7916 & \textbf{0.8625}\\
+\textsf{CREATININE}      & 0.7760          & 0.7959 & 0.7258 & 0.7723          & 0.8042 & 0.4189 & 0.5846 &          0.8895 & \textbf{0.9118}\\
+\textsf{DIETSUPP-2MOS}   & 0.6526          & 0.6432 & 0.5937 & 0.6926          & 0.7126 & 0.6539 & 0.5308 & \textbf{0.7975} &\\
+\textsf{DRUG-ABUSE}      & 0.7123          & 0.5795 & 0.6802 & 0.7370          & 0.4873 & 0.4873 & 0.4873 & 0.7020          & \textbf{1.0000}\\
+\textsf{ENGLISH}         & 0.7780          & 0.7780 & 0.8837 & 0.8837          & 0.5795 & 0.4873 & 0.4873 & 0.9172          & \textbf{1.0000}\\
+\textsf{HBA1C}           & 0.5429          & 0.5139 & 0.5588 & 0.5279          & 0.5702 & 0.4568 & 0.4006 & 0.9374          & \textbf{0.9601}\\
+\textsf{KETO-1YR}        & 0.5000          & 0.5000 & 0.5000 & 0.5000          & 0.5000 & 0.5000 & 0.5000 & 0.5000          &\\
+\textsf{MAJOR-DIABETES}  & 0.7375          & 0.6929 & 0.6554 & \textbf{0.7483} & 0.7429 & 0.5656 & 0.5473 &                 &\\
+\textsf{MAKES-DECISIONS} & 0.4873          & 0.4899 & 0.6192 & 0.5706          & 0.4899 & 0.4899 & 0.4899 & 0.8256          & \textbf{1.0000}\\
+\textsf{MI-6MOS}         & 0.4753          & 0.5306 & 0.5936 & 0.5097          & 0.5730 & 0.4767 & 0.4767 & 0.8026          & \textbf{0.8778}\\
+
+\cmidrule(r{0.25em}){1-1}\cmidrule(l{0.25em}r{0.25em}){2-6}\cmidrule(l{0.25em}r{0.25em}){7-8}\cmidrule(l{0.25em}){9-10}
+
+Micro-averaged & 0.8198 & 0.8108 & 0.7682 & 0.8222          & \textbf{0.8355} & 0.7813 & 0.7858 & &\\
+Macro-averaged & 0.6117 & 0.5888 & 0.6090 & \textbf{0.6336} & 0.5952          & 0.5031 & 0.4897 & &\\
+
+\bottomrule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\\[4pt]
+
+\multicolumn{10}{l}{\small (b) Evaluation on the test set.}\\[4pt]
+
+\toprule
+
+Tag & \multicolumn{5}{l}{Classical machine learning} & \multicolumn{2}{l}{Deep learning} & \multicolumn{2}{l}{Rule-based}\\
+
+\cmidrule(r{0.25em}){1-1}\cmidrule(l{0.25em}r{0.25em}){2-6}\cmidrule(l{0.25em}r{0.25em}){7-8}\cmidrule(l{0.25em}){9-10}
+
+& Ada & Bag & DT & GB & XGB & FCNN & CNN & RB & MRB\\
+
+\textsf{ABDOMINAL}       & 0.7574          & 0.5590          & 0.7079 & \textbf{0.7807} & 0.6334          & 0.4658 & 0.3944 &                 &\\
+\textsf{ADVANCED-CAD}    & 0.7977          & 0.7889          & 0.6178 & \textbf{0.8227} & 0.8114          & 0.4113 & 0.6673 & 0.7832          & 0.8089\\
+\textsf{ALCOHOL-ABUSE}   & \textbf{0.5896} & 0.4911          & 0.4850 & \textbf{0.5896} & 0.4911          & 0.4911 & 0.4911 & 0.4850          & 0.4850\\
+\textsf{ASP-FOR-MI}      & 0.4847          & 0.4401          & 0.5271 & 0.5469          & 0.4908          & 0.4416 & 0.4416 & 0.7095          & \textbf{0.7426}\\
+\textsf{CREATININE}      & 0.7329          & 0.7219          & 0.5933 & 0.7219          & 0.7110          & 0.4948 & 0.5411 & \textbf{0.8295} & 0.7862\\
+\textsf{DIETSUPP-2MOS}   & 0.6728          & 0.5597          & 0.5930 & 0.6510          & 0.6162          & 0.5390 & 0.5083 & \textbf{0.7943} &\\
+\textsf{DRUG-ABUSE}      & 0.4850          & 0.4911          & 0.6815 & 0.6601          & 0.4911          & 0.4911 & 0.4911 & 0.7312          & \textbf{0.9255}\\
+\textsf{ENGLISH}         & 0.7559          & \textbf{0.7929} & 0.7915 & 0.7929          & 0.5983          & 0.4591 & 0.4591 & 0.6554          & 0.6554\\
+\textsf{HBA1C}           & 0.6098          & 0.6048          & 0.6210 & 0.5773          & 0.5773          & 0.3676 & 0.3723 & \textbf{0.9382} & 0.8439\\
+\textsf{KETO-1YR}        & 0.5000          & 0.5000          & 0.5000 & 0.5000          & 0.5000          & 0.5000 & 0.5000 & 0.4971          &\\
+\textsf{MAJOR-DIABETES}  & 0.7902          & 0.8023          & 0.6975 & \textbf{0.8721} & 0.8023          & 0.6044 & 0.5966 &                 &\\
+\textsf{MAKES-DECISIONS} & 0.4911          & 0.4881          & 0.6277 & 0.4850          & \textbf{0.7440} & 0.4911 & 0.4911 & 0.6067          & 0.4911\\
+\textsf{MI-6MOS}         & 0.4724          & 0.4756          & 0.4625 & 0.4724          & 0.4756          & 0.4756 & 0.4756 & 0.7281          & \textbf{0.8102}\\
+
+\cmidrule(r{0.25em}){1-1}\cmidrule(l{0.25em}r{0.25em}){2-6}\cmidrule(l{0.25em}r{0.25em}){7-8}\cmidrule(l{0.25em}){9-10}
+
+Micro-averaged & 0.8331 & 0.8134 & 0.7775 & \textbf{0.8356} & 0.8258 & 0.7566 & 0.7676 & &\\
+Macro-averaged & 0.6261 & 0.5935 & 0.6081 & \textbf{0.6517} & 0.6110 & 0.4794 & 0.4946 & &\\
+
+\bottomrule
+
+\end{tabular}
+\end{table}
+\endgroup

@@ -1,0 +1,88 @@
+% Formatting footline.
+% https://tex.stackexchange.com/questions/105613/footer-in-beamer
+% https://tex.stackexchange.com/questions/286979/beamer-page-number-position
+
+% Option (1):
+% \setbeamertemplate{footline}[text line]{%
+% \parbox{\linewidth}{%
+% \vspace*{-10mm}% Manually adjusted.
+% \hfill\scriptsize\insertframenumber%
+% }}
+
+% Option (2):
+% \setbeamertemplate{footline}[text line]{%
+% \parbox{\linewidth}{%
+% \vspace*{-158.5mm}% Manually adjusted.
+% \hfill\scriptsize\insertframenumber%
+% }}
+
+% Option (3):
+% Warning: only use this if the projector screen shows the full slide.
+% \setbeamertemplate{footline}[text line]{%
+% \parbox{\linewidth}{%
+% \vspace*{-167.8mm}% Manually adjusted.
+% \hfill\fontsize{7.0pt}{8.4pt}\selectfont\insertframenumber%
+% % \hspace*{135mm}\fontsize{7.0pt}{8.4pt}\selectfont\insertframenumber%
+% }}
+
+% Option (4):
+\setbeamertemplate{footline}[text line]{%
+\parbox{\linewidth}{%
+\vspace*{-10mm}% Manually adjusted.
+\hfill\fontsize{7.0pt}{8.4pt}\insertframenumber%
+}}
+
+% Formatting title and subtitle.
+% https://tex.stackexchange.com/questions/120516/set-frame-subtitle-size
+\setbeamertemplate{frametitle}{%
+\vspace*{5mm}%
+\linespread{1.0}%
+\color{black}%
+\bfseries%
+% Invisible vertical space added so the text starts in the same
+% vertical position always (even if not using taller characters such
+% as "g" or "y").
+% https://tex.stackexchange.com/questions/109816/automatic-frame-titles-subtitles-with-condition
+\ifx\insertframetitle\empty%
+\else%
+\Large\insertframetitle\vphantom{AQgpqy}\par%
+\fi%
+\ifx\insertframesubtitle\empty%
+\else%
+\vspace*{2pt}%
+\scriptsize\insertframesubtitle\vphantom{AQgpqy}\par%
+%\large\insertframesubtitle\vphantom{AQgpqy}\par%
+\fi%
+\vspace*{-2.2mm}%
+\CurrentProgressBarIs%
+\vspace*{2mm}%
+}
+
+% To remove the navigation symbols.
+\setbeamertemplate{navigation symbols}{}
+
+% Adjust paper size.
+\setbeamersize{text margin left=10mm}
+\setbeamersize{text margin right=10mm}
+\setbeamersize{sidebar width left=0mm}
+\setbeamersize{sidebar width right=0mm}
+
+% How a covered item should be rendered.
+\setbeamercovered{invisible}
+%\setbeamercovered{transparent=10}
+%\setbeamercovered{transparent=25}
+%\setbeamercovered{dynamic}
+
+% Color management.
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{alerted text}{fg=mLightBrown}
+\setbeamercolor{example text}{fg=mLightGreen}
+\setbeamercolor{structure}{fg=black}
+
+% Change itemize bullets.
+% https://tex.stackexchange.com/questions/446524/beamer-controlling-the-size-of-custom-bullets
+% https://tex.stackexchange.com/questions/4860/customizing-itemize-in-beamer
+% https://tex.stackexchange.com/questions/11168/change-bullet-style-formatting-in-beamer
+\setbeamertemplate{itemize item}{\raisebox{0.15em}{\scalebox{0.60}{$\bullet$}}}
+\setbeamertemplate{itemize subitem}{\raisebox{0.15em}{\scalebox{0.55}{$\bullet$}}}
+\setbeamertemplate{itemize subsubitem}{\raisebox{0.15em}{\scalebox{0.50}{$\bullet$}}}

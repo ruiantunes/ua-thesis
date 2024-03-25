@@ -1,0 +1,56 @@
+%
+% Document typeset with LaTeX.
+%
+% Copyright (c) 2022, 2023 Rui Antunes
+%
+% LaTeX source code of the PhD thesis
+% at University of Aveiro by Rui Antunes.
+% https://github.com/ruiantunes/ua-thesis
+%
+% LaTeX template for theses at University of Aveiro by Rui Antunes.
+% https://github.com/ruiantunes/ua-thesis-template
+%
+% This code is based on the original LaTeX template created by
+% professor Tomás Oliveira e Silva.
+% http://sweet.ua.pt/tos/TeX.html
+%
+
+% Font size possible values are restricted to 10pt, 11pt and 12pt.
+\documentclass[12pt,twoside,a4paper,openright]{report}
+
+% UA thesis style file.
+\usepackage[engineering]{uathesis}
+
+% Additional packages.
+\input{tex/config/packages.tex}
+
+% Before begin document.
+\input{tex/config/before-begin.tex}
+
+\begin{document}
+
+% After begin document.
+\input{tex/config/after-begin.tex}
+
+% First pages.
+\input{tex/contents/first-pages.tex}
+
+% Chapters.
+\input{tex/contents/c1.tex}
+\input{tex/contents/c2.tex}
+\input{tex/contents/c3.tex}
+\input{tex/contents/c4.tex}
+\input{tex/contents/c5.tex}
+\input{tex/contents/c6.tex}
+
+% Bibliography.
+
+% To cite all the references (debugging purposes).
+% \nocite{*}
+
+% The bibliography using BibLaTeX.
+\printbibliography
+
+\cleardoublepage
+
+\end{document}

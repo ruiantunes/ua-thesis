@@ -1,0 +1,166 @@
+% Draw a page-layout diagram.
+% https://ctan.org/pkg/showframe
+% \usepackage{showframe}
+
+% Select the language.
+\usepackage[USenglish]{babel}
+
+% The "csquotes" package should be used with the "babel" package.
+% https://tex.stackexchange.com/questions/229638/package-biblatex-warning-babel-polyglossia-detected-but-csquotes-missing
+\usepackage[style=USenglish,threshold=1]{csquotes}
+
+% Removing vertical space before block quotes.
+% https://tex.stackexchange.com/questions/53287/leading-vertical-space-before-and-after-block-quotes
+\usepackage[vskip=0pt]{quoting}
+\SetBlockEnvironment{quoting}
+
+% To allow any font size.
+% https://tex.stackexchange.com/questions/58087/how-to-remove-the-warnings-font-shape-ot1-cmss-m-n-in-size-4-not-available
+\usepackage{anyfontsize}
+
+% Setting the line spacing.
+% http://tex.stackexchange.com/questions/83855/change-line-spacing-inside-the-document
+% https://stackoverflow.com/questions/1290765/manipulating-line-spacing-in-latex
+\usepackage{setspace}
+
+% Fully justified text.
+% https://www.overleaf.com/learn/latex/Text_alignment
+\usepackage{ragged2e}
+
+% Mathematical utilities.
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% https://en.wikibooks.org/wiki/LaTeX/Fonts
+\usepackage{fontspec}
+
+% \setmainfont[Ligatures=TeX]{Arial}
+% \setsansfont[Ligatures=TeX]{Arial}
+% \setmainfont{KoHo}
+% \setsansfont{KoHo}
+\setmainfont{Lato}
+\setsansfont{Lato}
+% \setmainfont{Nunito}
+% \setsansfont{Nunito}
+% \setmainfont{Nunito Sans}
+% \setsansfont{Nunito Sans}
+% \setmainfont{Roboto}
+% \setsansfont{Roboto}
+% \setmainfont{TeX Gyre Heros}
+% \setsansfont{TeX Gyre Heros}
+
+% \setmonofont{CMU Typewriter Text}
+% \setmonofont{Inconsolata}[Scale=MatchLowercase]
+% \setmonofont{JetBrainsMono}
+% \setmonofont{Monaco}
+% \setmonofont{RobotoMono}
+\setmonofont{UbuntuMono}
+
+% To use \mathbf{} without errors.
+% https://github.com/wspr/unicode-math/issues/556
+\usepackage{unicode-math}
+% \setmathfont{Latin Modern Math}
+\setmathfont{Libertinus Math}
+
+% Add text over images.
+% https://stackoverflow.com/questions/2628448/latex-is-it-possible-to-have-text-on-top-of-images
+% https://tex.stackexchange.com/questions/8920/add-a-textbox-overtop-an-image-in-a-beamer-slide
+\usepackage{tikz}
+
+% Add text at a specific position.
+% https://tex.stackexchange.com/questions/596242/adding-text-in-a-specific-position-in-beamer
+% \usepackage[absolute,overlay]{textpos}
+% \setlength{\TPHorizModule}{10mm}
+% \setlength{\TPVertModule}{\TPHorizModule}
+% \textblockorigin{0mm}{0mm}
+
+% Outline around text.
+% https://tex.stackexchange.com/questions/18472/tikz-halo-around-text
+% https://tex.stackexchange.com/questions/618796/problem-with-contour-sty-with-xelatex
+% \usepackage[copies]{contour}
+% \contourlength{0.6pt}
+
+% Checkmark and X mark.
+% https://tex.stackexchange.com/questions/42619/x-mark-to-match-checkmark
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+% Underline.
+% https://tex.stackexchange.com/questions/13377/how-can-i-underline-a-single-word-with-latex
+% \usepackage[normalem]{ulem}
+
+% Rotate text.
+% \usepackage{rotating}
+
+% To change the itemize character.
+% Note that it appears there are some conflicts.
+% https://tex.stackexchange.com/questions/24371/does-enumitem-conflict-with-beamer-for-lists
+% https://tex.stackexchange.com/questions/115907/how-do-i-remove-white-space-above-itemize-command-in-beamer-using-enumitem
+% \usepackage{enumitem}
+
+% For long comments.
+% \usepackage{comment}
+
+% Multirow in table.
+% https://tex.stackexchange.com/questions/73283/how-to-use-multirow
+\usepackage{multirow}
+
+% Tabular environments. Vertical alignment in row tables.
+% https://tex.stackexchange.com/questions/30551/centering-mutirow-text-in-a-table-whose-cells-contain-several-lines-of-text
+% https://tex.stackexchange.com/questions/156219/proper-centering-with-cmidrule-and-multi-row-and-column
+\usepackage{array}
+
+% To add vertical space in specific row cells: \addlinespace[2pt].
+% https://tex.stackexchange.com/questions/80075/how-to-increase-row-height-while-using-booktabs
+% To allow the use of \toprule, \midrule and \bottomrule in tables.
+\usepackage{booktabs}
+
+% Horizontally centered and right aligned.
+% https://tex.stackexchange.com/questions/154958/vertically-centered-and-right-left-center-horizontal-alignment-in-tabular
+
+% Note: the following shortcuts for column alignments are easy to
+% memorize. They are the 3x3 square at the left of the keyboard.
+
+% --- Top (vertical alignment) ---
+% Justified.
+% p{...}
+% Left-aligned.
+\newcolumntype{E}[1]{>{\raggedright\arraybackslash}p{#1}}
+% Centered.
+\newcolumntype{R}[1]{>{\centering\arraybackslash}p{#1}}
+% Right-aligned.
+\newcolumntype{T}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% --- Middle (vertical alignment) ---
+% Justified.
+% m{...}
+% Left-aligned.
+\newcolumntype{D}[1]{>{\raggedright\arraybackslash}m{#1}}
+% Centered.
+\newcolumntype{F}[1]{>{\centering\arraybackslash}m{#1}}
+% Right-aligned.
+\newcolumntype{G}[1]{>{\raggedleft\arraybackslash}m{#1}}
+
+% --- Bottom (vertical alignment) ---
+% Justified.
+% b{...}
+% Left-aligned.
+\newcolumntype{C}[1]{>{\raggedright\arraybackslash}b{#1}}
+% Centered.
+\newcolumntype{V}[1]{>{\centering\arraybackslash}b{#1}}
+% Right-aligned.
+\newcolumntype{B}[1]{>{\raggedleft\arraybackslash}b{#1}}
+
+% Extra column with zero width and no padding. This is used to avoid the
+% incorrect alignment in the last column.
+% https://tex.stackexchange.com/questions/159257/increase-latex-table-row-height
+% https://tex.stackexchange.com/questions/68732/vertical-alignment-in-table-m-column-row-size-problem-in-last-column
+\newcolumntype{N}{@{}m{0pt}@{}}
+
+% Empty column separator.
+% https://texfaq.org/FAQ-fixwidtab
+\newcolumntype{O}{@{}}
+
+% To use 2% of the \textwidth as column separator.
+\newcolumntype{I}{@{\hskip 0.02\textwidth}}

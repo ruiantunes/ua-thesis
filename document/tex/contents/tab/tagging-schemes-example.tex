@@ -1,0 +1,45 @@
+\begingroup
+% \normalfont
+% \color{black}
+
+\begin{table}[!t]
+
+\caption[A sample text annotated with different tagging schemes.]{A sample text annotated with different tagging schemes. Adapted from \textcite{cho2013a}.}
+\label{tab:tagging-schemes-example}
+
+\centering
+% \small
+
+\begin{tabular}{llll}
+
+\toprule
+
+Tokens & IO & IOB2 & IOBES\\
+
+\midrule
+
+Gamma & I-gene & B-gene & B-gene\\
+
+glutamyl & I-gene & I-gene & I-gene\\
+
+transpeptidase & I-gene & I-gene & E-gene\\
+
+( & O & O & O\\
+
+GGTP & I-gene & B-gene & S-gene\\
+
+) & O & O & O\\
+
+activity & O & O & O\\
+
+in & O & O & O\\
+
+the & O & O & O\\
+
+... & ... & ... & ...\\
+
+\bottomrule
+
+\end{tabular}
+\end{table}
+\endgroup

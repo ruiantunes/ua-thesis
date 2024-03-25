@@ -1,0 +1,60 @@
+\begingroup
+\newcommand{\z}{\hphantom{0}}
+
+\begin{table}[!tb]
+
+\caption%
+[Supervised learning disambiguation results in the MSH WSD dataset using bag-of-words and word embeddings features.]%
+{Supervised learning disambiguation results in the MSH WSD dataset using bag-of-words and word embeddings features. The evaluation metric is accuracy and the results were obtained using 5-fold cross-validation. Rows 1--3 present the results using only bag-of-words features (unigrams, bigrams, and both), rows 4--9 present the results using only word embeddings (different vector sizes and windows), and rows 10--15 present the results from combining bag-of-words features (unigrams) with word embeddings. The highest accuracy, in each of these groups, is highlighted in bold. The overall highest accuracy is also underlined.}
+\label{tab:wsd-supervised}
+
+\centering
+
+\small
+
+\begin{tabular}{G{3.5mm}D{13.3mm}D{6.9mm}D{13.7mm}G{11mm}G{11mm}G{11mm}G{11mm}G{11mm}}
+\toprule
+
+& \textbf{BoW}* & \multicolumn{2}{l}{\textbf{WE}\textsuperscript{†}} & \multicolumn{5}{l}{\textbf{Classifier}\textsuperscript{‡}}\\
+\multicolumn{1}{l}{Row} & Features & Size & Window & DT & kNN & LR & MLP & SVM\\
+
+\midrule
+
+1 & U   & \z\z- & \z- & 0.9067 & 0.9324 & 0.9205 & 0.9401 & 0.9511\\
+2 & B   & \z\z- & \z- & 0.8335 & 0.8850 & 0.8704 & 0.9224 & 0.9253\\
+3 & U+B & \z\z- & \z- & 0.9019 & 0.9354 & 0.9101 & 0.9445 & \textbf{0.9552}\\
+
+\midrule
+
+4 & - & 100 & \z5 & 0.9219 & 0.9452 & 0.9500 & 0.9503 & 0.9449\\
+5 & - &     &  20 & 0.9185 & 0.9452 & 0.9495 & 0.9498 & 0.9452\\
+6 & - &     &  50 & 0.9194 & 0.9447 & 0.9495 & 0.9501 & 0.9431\\[2pt]
+7 & - & 300 & \z5 & 0.9186 & 0.9449 & 0.9505 & 0.9503 & 0.9452\\
+8 & - &     &  20 & 0.9186 & 0.9444 & 0.9508 & \textbf{0.9514} & 0.9446\\
+9 & - &     &  50 & 0.9166 & 0.9441 & 0.9509 & 0.9508 & 0.9444\\
+
+\midrule
+
+10 & U & 100 & \z5 & 0.9244 & 0.9464 & 0.9515 & \underline{\textbf{0.9557}} & 0.9490\\
+11 &   &     &  20 & 0.9215 & 0.9468 & 0.9514 & 0.9556 & 0.9486\\
+12 &   &     &  50 & 0.9229 & 0.9467 & 0.9515 & 0.9555 & 0.9481\\[2pt]
+13 &   & 300 & \z5 & 0.9218 & 0.9475 & 0.9519 & 0.9544 & 0.9499\\
+14 &   &     &  20 & 0.9194 & 0.9473 & 0.9524 & 0.9550 & 0.9496\\
+15 &   &     &  50 & 0.9191 & 0.9468 & 0.9520 & 0.9545 & 0.9482\\
+
+\bottomrule
+
+\multicolumn{9}{D{14.3cm}}{* Bag-of-words features. U: unigrams. B: bigrams.}\\
+\multicolumn{9}{D{14.3cm}}{\textsuperscript{†} Word embeddings model trained with a specific vector size and context window.}\\
+\multicolumn{9}{D{14.3cm}}{\textsuperscript{‡} Machine learning classifier evaluated. DT: decision tree. kNN: k-nearest neighbors (k=5).\newline LR: logistic regression. MLP: multi-layer perceptron. SVM: support vector machine.}
+
+\end{tabular}
+\end{table}
+\endgroup
+
+% Footnote symbols:
+% https://tex.stackexchange.com/questions/826/symbols-instead-of-numbers-as-footnote-markers
+
+% 1   asterisk        *   2   dagger      †   3   double dagger       ‡
+% 4   section symbol  §   5   paragraph   ¶   6   parallel lines      ‖
+% 7   two asterisks   **  8   two daggers ††  9   two double daggers  ‡‡

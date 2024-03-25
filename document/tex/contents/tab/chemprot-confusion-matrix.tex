@@ -1,0 +1,70 @@
+\begingroup
+
+%\renewcommand*{\arraystretch}{1.1}
+\renewcommand*{\arraystretch}{1.4}
+\setlength\tabcolsep{0.010\textwidth}
+
+\newcommand{\z}{\hphantom{0}}
+
+% https://tex.stackexchange.com/questions/74459/remove-space-before-colorbox
+\newcommand{\reducedstrut}{\vrule width 0pt height .6\ht\strutbox depth .6\dp\strutbox\relax}
+\newcommand{\cb}[2]{\colorbox[RGB]{#1}{\reducedstrut#2}}
+
+\begin{table}[!t]
+
+\centering
+% \tiny
+% \scriptsize
+\footnotesize
+% \small
+
+\caption%
+[Confusion matrix in the ChemProt test set obtained by the BiLSTM model that achieved the highest F1-score in the development set.]%
+{Confusion matrix in the ChemProt test set (F1-score 0.6306) obtained by the BiLSTM model that achieved the highest F1-score in the development set, as reported in \Cref{tab:chemprot-results-best}. The \cb{230,230,230}{light-gray} cells show correct classifications (true positives); \cb{200,200,200}{mid-gray} cells show false negatives (first row) and misclassifications between classes; and \cb{170,170,170}{dark-gray} cells show false positives.}
+\label{tab:chemprot-confusion-matrix}
+
+\begin{tabular}{E{16mm}E{0mm}R{16mm}R{16mm}R{16mm}R{16mm}R{16mm}R{16mm}R{11mm}}
+
+\toprule
+
+\multicolumn{1}{l}{Predicted} & \multicolumn{1}{c}{} & \multicolumn{6}{c}{Gold-standard} &\\
+
+% How to make double cline in tables.
+% https://tex.stackexchange.com/questions/10121/how-to-make-double-cline-in-tables
+\cmidrule{1-1}\cmidrule{3-8}
+% \morecmidrules
+% \cmidrule{1-1}\cmidrule{3-8}
+
+& & Negative & CPR:3 & CPR:4 & CPR:5 & CPR:6 & CPR:9 & Sum\\[-4pt]
+& & & Activation & Inhibition & Agonist & Antagonist & Substrate &\\
+
+Negative & & & \cellcolor[RGB]{200,200,200}238 & \cellcolor[RGB]{200,200,200}\z524 & \cellcolor[RGB]{200,200,200}\z97 & \cellcolor[RGB]{200,200,200}124 & \cellcolor[RGB]{200,200,200}341 & 1324\\
+
+Activation & & \cellcolor[RGB]{170,170,170}263 & \cellcolor[RGB]{230,230,230}382 & \cellcolor[RGB]{200,200,200}\z\z19 & \cellcolor[RGB]{200,200,200}\z\z5 & \cellcolor[RGB]{200,200,200}\z\z0 & \cellcolor[RGB]{200,200,200}\z\z0 & \z669\\
+
+Inhibition & & \cellcolor[RGB]{170,170,170}401 & \cellcolor[RGB]{200,200,200}\z45 & \cellcolor[RGB]{230,230,230}1107 & \cellcolor[RGB]{200,200,200}\z14 & \cellcolor[RGB]{200,200,200}\z\z2 & \cellcolor[RGB]{200,200,200}\z\z2 & 1571\\
+
+Agonist & & \cellcolor[RGB]{170,170,170}\z45 & \cellcolor[RGB]{200,200,200}\z\z0 & \cellcolor[RGB]{200,200,200}\z\z\z2 & \cellcolor[RGB]{230,230,230}\z79 & \cellcolor[RGB]{200,200,200}\z\z6 & \cellcolor[RGB]{200,200,200}\z\z0 & \z132\\
+
+Antagonist & & \cellcolor[RGB]{170,170,170}\z56 & \cellcolor[RGB]{200,200,200}\z\z0 & \cellcolor[RGB]{200,200,200}\z\z\z1 & \cellcolor[RGB]{200,200,200}\z\z0 & \cellcolor[RGB]{230,230,230}161 & \cellcolor[RGB]{200,200,200}\z\z0& \z218\\
+
+Substrate & & \cellcolor[RGB]{170,170,170}185 & \cellcolor[RGB]{200,200,200}\z\z0 & \cellcolor[RGB]{200,200,200}\z\z\z8 & \cellcolor[RGB]{200,200,200}\z\z0 & \cellcolor[RGB]{200,200,200}\z\z0 & \cellcolor[RGB]{230,230,230}301 & \z494\\
+
+Sum & & 950 & 665 & 1661 & 195 & 293 & 644 &\\
+
+\multicolumn{9}{c}{}\\[-4pt]
+
+\arrayrulecolor{white}
+\multicolumn{3}{l}{} & \multicolumn{2}{l}{\hskip30pt True positives} & 2030 & \multicolumn{2}{r}{\cellcolor[RGB]{230,230,230}} &\\
+\hline\hline
+\multicolumn{3}{l}{} & \multicolumn{2}{l}{\hskip30pt False negatives} & 1428 & \multicolumn{2}{r}{\cellcolor[RGB]{200,200,200}} &\\
+\hline\hline
+\multicolumn{3}{l}{} & \multicolumn{2}{l}{\hskip30pt False positives} & \z950 & \multicolumn{2}{r}{\cellcolor[RGB]{170,170,170}} &\\
+
+\arrayrulecolor{black}
+\bottomrule
+
+\end{tabular}
+
+\end{table}
+\endgroup

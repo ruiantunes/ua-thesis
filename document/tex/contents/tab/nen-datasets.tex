@@ -1,0 +1,69 @@
+\begingroup
+% \normalfont
+% \color{black}
+
+\newcommand{\z}{\hspace*{1em}}
+
+\begin{table}[!tb]
+
+\caption[Datasets for biomedical named entity normalization.]{Datasets for biomedical named entity normalization, presented in chronological order. CDR: chemical disease relation. CUI: Concept Unique Identifier. MCN: Medical Concept Normalization. MeSH: Medical Subject Headings. NCBI: National Center for Biotechnology Information. NLM: National Library of Medicine. OMIM: Online Mendelian Inheritance in Man. PMC: PubMed Central. ShARe: Shared Annotated Resources. UMLS: Unified Medical Language System.}
+\label{tab:nen-datasets}
+
+\centering
+
+\begin{tabular}{E{0.30\textwidth}p{0.62\textwidth}}
+
+\toprule
+
+% \textbf{Resource} & \textbf{Description}\\
+Resource & Description\\
+
+\midrule
+
+NCBI disease corpus\newline
+\z{\small\parencite{dogan2012a}}\newline
+\z{\small\parencite{leaman2013a}}\newline
+\z{\small\parencite{dogan2014a}}
+& A collection of 793 \as{pubmed} abstracts containing disease entity mentions and their corresponding \as{mesh} or \as{omim} identifiers, where each abstract was manually annotated by two experts. A total of 6982 disease mentions are mapped to 790 unique identifiers.\newline
+{\footnotesize\url{https://www.ncbi.nlm.nih.gov/CBBresearch/Dogan/DISEASE}}
+\\
+
+\midrule
+
+ShARe corpus\newline
+\z{\small\parencite{elhadad2015a}}\newline
+\z{\small\parencite{pradhan2015a}}
+& The SemEval-2015 ShARe corpus is comprised of 531 de-identified clinical notes (discharge summaries and radilogy reports) annotated with disorder mentions along with their normalization to the \as{umls} terminology using \asp{cui}.\newline
+{\footnotesize\url{http://share.healthnlp.org}}
+\\
+
+\midrule
+
+BC5CDR corpus\newline
+\z{\small\parencite{li2015a,li2016b}}
+& It contains 1500 \as{pubmed} abstracts annotated with biomedical entity mentions linked with \as{mesh} identifiers, with a total of 4409 chemicals and 5818 diseases.\newline
+{\footnotesize\url{https://biocreative.bioinformatics.udel.edu/tasks/biocreative-v/track-3-cdr}}
+\\
+
+\midrule
+
+MCN corpus\newline
+\z{\small\parencite{luo2019a,luo2020b}}
+&
+A wide-coverage corpus for clinical concept normalization including annotated medical problems, treatments, and tests. It consists of 100 discharge summaries with a total of 10\,919 concept mentions mapped to 3792 unique identifiers from two controlled vocabularies---RxNorm \parencite{liu2005a,nelson2011a} and \as{snomed} CT \parencite{cote1986a,stearns2001a,cornet2008a,bodenreider2018a}.\newline
+{\footnotesize\url{https://n2c2.dbmi.hms.harvard.edu/2019-track-3}}
+\\
+
+\midrule
+
+NLM-Chem corpus\newline
+\z{\small\parencite{islamaj2021a,islamaj2021c}}
+& It consists of 150 full-text \as{pmc} articles, doubly annotated by ten \as{nlm} experts, with a total of 38\,942 chemical entity mentions, which correspond to 4867 unique chemical names and 2064 \as{mesh} identifiers.\newline
+{\footnotesize\url{https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vii/track-2}}
+\\
+
+\bottomrule
+
+\end{tabular}
+\end{table}
+\endgroup

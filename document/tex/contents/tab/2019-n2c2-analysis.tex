@@ -1,0 +1,67 @@
+\begingroup
+
+% \renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{6.4pt}
+
+\begin{table}[!t]
+
+\caption%
+[Error analysis of predictions on the 2019 \as{n2c2}/\as{ohnlp} Track~1 dataset.]%
+{Error analysis of predictions on the 2019 \as{n2c2}/\as{ohnlp} Track~1 dataset. Performance evaluation for different similarity levels using the following model from \Cref{tab:2019-n2c2-results}: sentence embeddings, base text pre-processing, and 10-fold evaluation. The three highest F1-scores in each set are highlighted in bold.}
+\label{tab:2019-n2c2-analysis}
+
+\centering
+
+\small
+% \footnotesize
+% \scriptsize
+% \tiny
+
+\begin{tabular}{lcccccccccc}
+
+\toprule
+
+Metric & \multicolumn{5}{l}{Training} & \multicolumn{5}{l}{Test}\\
+
+\cmidrule(r){1-1}\cmidrule(lr){2-6}\cmidrule(l){7-11}
+
+& [0, 1] & ]1, 2] & ]2, 3] & ]3, 4] & ]4, 5] & [0, 1] & ]1, 2] & ]2, 3] & ]3, 4] & ]4, 5]\\
+
+Precision & 0.826 & 0.206 & 0.361 & 0.488 & 0.491 & 0.853 & 0.115 & 0.097 & 0.365 & 0.318\\
+Recall    & 0.416 & 0.362 & 0.244 & 0.625 & 0.532 & 0.269 & 0.391 & 0.188 & 0.307 & 0.618\\
+
+F1-score  & \textbf{0.553} & 0.263 & 0.291 & \textbf{0.548} & \textbf{0.511} & \textbf{0.409} & 0.177 & 0.128 & \textbf{0.333} & \textbf{0.420}\\
+
+\bottomrule
+
+\end{tabular}
+\end{table}
+\endgroup
+
+% Training - SE - Base - 0.811
+%
+%     MODE 2 evaluation [same interval]
+%     --------------------------------------  --------------
+%     [0, 1]  ]1, 2]  ]2, 3]  ]3, 4]  ]4, 5]   Micro-average
+% ------------------------------------------  --------------
+% TP     389     167     288     954     435            2233
+% FP      82     644     510    1000     451            2687
+% FN     546     294     892     572     383            2687
+% P   0.8259  0.2059  0.3609  0.4882  0.4910          0.4539
+% R   0.4160  0.3623  0.2441  0.6252  0.5318          0.4539
+% F1  0.5533  0.2626  0.2912  0.5483  0.5106          0.4539
+% ------------------------------------------  --------------
+
+% Test - SE - Base - 0.837
+%
+%     MODE 2 evaluation [same interval]
+%     --------------------------------------  --------------
+%     [0, 1]  ]1, 2]  ]2, 3]  ]3, 4]  ]4, 5]   Micro-average
+% ------------------------------------------  --------------
+% TP      64      18       6      19      21             128
+% FP      11     139      56      33      45             284
+% FN     174      28      26      43      13             284
+% P   0.8533  0.1146  0.0968  0.3654  0.3182          0.3107
+% R   0.2689  0.3913  0.1875  0.3065  0.6176          0.3107
+% F1  0.4089  0.1773  0.1277  0.3333  0.4200          0.3107
+% ------------------------------------------  --------------

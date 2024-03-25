@@ -1,0 +1,39 @@
+\begingroup
+% \normalfont
+% \color{black}
+
+\begin{table}[!tb]
+
+\caption[Accuracy disambiguation results, in the MSH WSD dataset, using different machine learning classifiers and word embeddings from the general and biomedical domains (Wikipedia and \as{pubmed}).]{Accuracy disambiguation results, in the MSH WSD dataset, using different machine learning classifiers and word embeddings from the general and biomedical domains (Wikipedia and \as{pubmed}). Results shown are the average across five folds. DT: decision tree; kNN: k-nearest neighbor (k=5); PA: passive aggressive linear model; RR: ridge regression; SGD: linear support vector machine with stochastic gradient descent; SVC: support vector classification.}
+\label{tab:wsd-wikipedia-vs-pubmed}
+
+\centering
+
+\large
+
+\begin{tabular}{E{20mm}T{36mm}T{30mm}}
+
+\toprule
+
+Classifier & \multicolumn{2}{c}{Model of word embeddings from}\\
+
+% \cmidrule(r){1-1}\cmidrule(l){2-3}
+% \midrule
+
+% & \textbf{Wikipedia} & \textbf{PubMed}\\
+& Wikipedia & PubMed\\
+
+\cmidrule(r){1-1}\cmidrule(l){2-3}
+
+DT  & 0.817 & 0.849\\
+kNN & 0.896 & 0.918\\
+PA  & 0.893 & \textbf{0.928}\\
+RR  & 0.905 & 0.910\\
+SGD & 0.874 & 0.916\\
+SVC & \textbf{0.912} & 0.924\\
+
+\bottomrule
+
+\end{tabular}
+\end{table}
+\endgroup

@@ -1,0 +1,51 @@
+\begingroup
+% \newcommand{\minorsmall}{\fontsize{10.5pt}{12.6pt}\selectfont}
+% \renewcommand*{\arraystretch}{1.1}
+
+\begin{table}[!t]
+
+\centering
+
+% \tiny
+% \scriptsize
+% \footnotesize
+% \minorsmall
+% \small
+
+\caption[ChemProt dataset statistics.]{ChemProt dataset statistics.}
+\label{tab:chemprot-dataset}
+
+\begin{tabular}{D{19mm}D{20mm}D{13mm}G{17mm}G{26mm}G{15.5mm}}
+
+\toprule
+
+% & & & \textbf{Training} & \textbf{Development} & \textbf{Test}\\
+& & & Training & Development & Test\\
+
+\midrule
+
+Abstracts & \multicolumn{2}{l}{Total}                    & 1020 & 612 & 800\\
+          & \multicolumn{2}{l}{With any relation}        &  767 & 443 & 620\\
+          & \multicolumn{2}{l}{With evaluated relations} &  635 & 376 & 514\\
+
+\midrule
+
+Entities & Chemical & & 13\,017 &    8004 & 10\,810\\
+         & Protein  & & 12\,735 &    7563 & 10\,018\\
+         & Total    & & 25\,752 & 15\,567 & 20\,828\\
+
+\midrule
+
+Relations & Activation & (CPR:3) &  768 &  550 &  665\\
+          & Inhibition & (CPR:4) & 2254 & 1094 & 1661\\
+          & Agonist    & (CPR:5) &  173 &  116 &  195\\
+          & Antagonist & (CPR:6) &  235 &  199 &  293\\
+          & Substrate  & (CPR:9) &  727 &  457 &  644\\
+          & Total      &         & 6437 & 3558 & 5744\\
+
+\bottomrule
+
+\end{tabular}
+
+\end{table}
+\endgroup

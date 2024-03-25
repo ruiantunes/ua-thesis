@@ -1,0 +1,52 @@
+\begingroup
+
+%\renewcommand*{\arraystretch}{1.1}
+\setlength\tabcolsep{0.010\textwidth}
+% \newcommand{\minorfootnotesize}{\fontsize{9.7pt}{11.64pt}\selectfont}
+\newcommand{\minorfootnotesize}{\fontsize{9.0pt}{10.8pt}\selectfont}
+
+\begin{table}[!t]
+
+\centering
+
+% \tiny
+% \scriptsize
+\minorfootnotesize
+% \footnotesize
+% \small
+
+\caption[Comparison between participating teams in the ChemProt challenge (F1-score results on the test set).]%
+{Comparison between participating teams in the ChemProt challenge (F1-score results on the test set). CNN: convolutional neural network. ML: machine learning. RNN: recurrent neural network. SVM: support vector machine.}
+\label{tab:chemprot-results-comparison}
+
+\begin{tabular}{G{4mm}D{60mm}D{47mm}G{14mm}G{10mm}}
+
+\toprule
+
+R* & Work & Classifiers & Challenge & PC\textsuperscript{†}\\
+
+\midrule
+
+1 & \textcite{peng2017b,peng2018a} & SVM, CNN and RNN & \textbf{0.6410} &\\
+2 & \textcite{corbett2017b,corbett2018a} & RNN and CNN & 0.6141 & 0.6258\\
+3 & \textcite{mehryary2017a,mehryary2018a} & SVM and RNN & 0.6099 & 0.6310\\
+4 & \textcite{lim2017a,lim2018a} & Tree-structured RNN & 0.5853 & 0.6410\\
+5 & \textcite{lung2017a,lung2019a} & Traditional ML & 0.5671 &\\
+6 & Ours \parencite{matos2017c,antunes2019b} & RNN and CNN & 0.5181 & 0.6306\\
+7 & \textcite{liu2017d,liu2018a} & CNN and attention-based RNN & 0.4948 & 0.5270\\
+8 & \textcite{verga2017a} & Bi-affine attention network & 0.4582 &\\
+9 & \textcite{wang2017e} & RNN & 0.3839 &\\
+10 & \textcite{tripodi2017a} & Traditional ML and neural networks & 0.3700 &\\
+11 & \textcite{warikoo2017a,warikoo2018a} & Tree kernel & 0.3092 & 0.3654\\
+12 & Sun \parencite{krallinger2017a} & - & 0.2195 &\\
+13 & \textcite{yuksel2017a} & CNN & 0.1864 &\\
+
+\bottomrule
+
+\multicolumn{5}{l}{* R: rank. Teams ranked according to the official evaluation.}\\
+\multicolumn{5}{l}{\textsuperscript{†} PC: post-challenge. Improved results due to post-challenge enhancements.}
+
+\end{tabular}
+
+\end{table}
+\endgroup

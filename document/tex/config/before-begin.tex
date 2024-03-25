@@ -1,0 +1,64 @@
+% Title and author. This is not mandatory to change, because this is
+% only used by the "\maketitle" command which it is not used in this
+% template.
+\title{The title}
+\author{The author}
+
+% Table of contents depth. This is optional (comment to use default).
+%   Depth of the table of contents (TOC):
+%     1 ... chapter and sections;
+%     2 ... chapters, sections, and subsections;
+%     3 ... chapters, sections, subsections, and subsubsections.
+% \setcounter{tocdepth}{3}
+% \setcounter{secnumdepth}{3}
+
+% List of abbreviations.
+% \input{tex/config/abbreviations/lower-case.tex}
+% \input{tex/config/abbreviations/sentence-case.tex}
+\input{tex/config/abbreviations/title-case.tex}
+
+% Math functions declaration.
+% https://tex.stackexchange.com/questions/95171/how-can-i-define-user-defined-functions-in-math-mode
+% https://tex.stackexchange.com/questions/130510/write-text-correctly-in-equations
+\DeclareMathOperator{\score}{score}
+\DeclareMathOperator{\NPMI}{NPMI}
+\DeclareMathOperator{\CS}{CS}
+\DeclareMathOperator{\functionf}{f}
+
+% Declaring variables as math text alphabets.
+% https://tex.stackexchange.com/questions/553236/how-do-i-format-words-as-variable-names
+\newcommand\variablename[1]{\mathop{\mathrm{#1}}\nolimits}
+\newcommand\variablenamevector[1]{\mathop{\mathbf{#1}}\nolimits}
+
+\newcommand{\TP}{\variablename{TP}}
+\newcommand{\TN}{\variablename{TN}}
+\newcommand{\FP}{\variablename{FP}}
+\newcommand{\FN}{\variablename{FN}}
+
+\newcommand{\Precision}{\variablename{Precision}}
+\newcommand{\Recall}{\variablename{Recall}}
+\newcommand{\Accuracy}{\variablename{Accuracy}}
+\newcommand{\Specificity}{\variablename{Specificity}}
+\newcommand{\Fscore}{\variablename{F1\hbox{-}score}}
+
+\newcommand{\CUI}{\variablename{CUI}}
+\newcommand{\tvec}{\mathbf{t}}
+\newcommand{\CUIvec}{\variablenamevector{CUI}}
+
+% List of manually hyphenated words in case hyphenation is enabled
+% (check the "hyphenat" package). Hyphenation in the middle is desired
+% (better readability).
+\hyphenation{
+% English words.
+ex-am-ple
+mas-sa-chu-setts
+test
+% Portuguese words.
+Gui-lher-me
+bi-o-me-di-ci-na
+cien-tí-fico
+con-cei-tos
+exem-plo
+infor-mações
+tes-te
+}

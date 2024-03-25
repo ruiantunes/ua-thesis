@@ -1,0 +1,77 @@
+\afterpage{
+\begingroup
+% \normalfont
+% \color{black}
+\singlespacing
+
+% \renewcommand{\arraystretch}{1.2}
+\setlength\tabcolsep{4.0pt}
+
+% \newcommand{\z}{\hspace*{1em}}
+\newcommand{\minorfootnotesize}{\fontsize{9.7pt}{11.64pt}\selectfont}
+
+\small
+% \footnotesize
+% \scriptsize
+% \minorscriptsize
+% \tiny
+
+% O   + E    + I*2    + E
+% 0.0 + 0.38 + 0.02*2 + 0.58 = 1.0
+
+% \begin{longtable}[c]{OE{0.38\textwidth}IIE{0.58\textwidth}N}
+\begin{longtable}[c]{E{0.29\textwidth}p{0.67\textwidth}}
+
+\caption{A list of biomedical databases, ontologies, and terminologies.}
+\label{tab:biomedical-databases}\\
+
+\toprule
+
+Resource & Description\\
+% \textbf{Resource} & \textbf{Description}\\
+
+\midrule
+
+\as{biogrid}\newline{\footnotesize\parencite{chatraryamontri2017a}} & Biological General Repository for Interaction Datasets (\as{biogrid}) is a database containing protein, genetic, and chemical interactions.\newline{\minorfootnotesize\url{https://thebiogrid.org}}\\
+
+\midrule
+
+\as{ctd}\newline{\footnotesize\parencite{davis2017a}} & Comparative Toxicogenomics Database (\as{ctd}) contains information about interactions between chemicals, genes, and diseases.\newline{\minorfootnotesize\url{https://ctdbase.org}}\\
+
+\midrule
+
+DrugBank\newline{\footnotesize\parencite{wishart2018a}} & DrugBank is a database containing molecular information about drugs, their mechanisms, interactions, and targets.\newline{\minorfootnotesize\url{https://www.drugbank.com}}\\
+
+\midrule
+
+\as{mesh}\newline{\footnotesize\parencite{lipscomb2000a}} & Medical Subject Headings (\as{mesh}) is the terminology used for indexing articles for \as{medline} literature.\newline{\minorfootnotesize\url{https://www.ncbi.nlm.nih.gov/mesh}}\\
+
+\midrule
+
+\as{mimic}-III\newline{\footnotesize\parencite{johnson2016a}} & Medical Information Mart for Intensive Care (\as{mimic}) is a large database comprising information, such as medications and clinical notes, about patients admitted to critical care units.\newline{\minorfootnotesize\url{https://mimic.mit.edu}}\\
+
+\midrule
+
+\as{obo} Foundry\newline{\footnotesize\parencite{smith2007a}} & The Open Biological and Biomedical Ontologies (\as{obo}) Foundry is an initiative for maintaining a family of interoperable ontologies in the biomedical domain.\newline{\minorfootnotesize\url{https://obofoundry.org}}\\
+
+\midrule
+
+\as{pubmed}\newline{\footnotesize\parencite{sayers2021a}} & \as{pubmed} (Public \as{medline}) is a database comprising scientific abstracts and citations published in life science journals.\newline{\minorfootnotesize\url{https://pubmed.ncbi.nlm.nih.gov}}\\
+
+\midrule
+
+\as{snomed}\newline{\footnotesize\parencite{cornet2008a}} & Systematized Nomenclature of Medicine (\as{snomed}) is a global standard for clinical health terminology.\newline{\minorfootnotesize\url{https://www.snomed.org}}\\
+
+\midrule
+
+\as{umls}\newline\footnotesize{\parencite{mccray1989a}} & Unified Medical Language System (\as{umls}) integrates biomedical terminology, coding standards, and other resources such as a semantic network for improving interoperability between biomedical information systems.\newline{\minorfootnotesize\url{https://www.nlm.nih.gov/research/umls/index.html}}\\
+
+\midrule
+
+\as{uniprot}\newline\footnotesize{\parencite{theuniprot2017a}} & Universal Protein Resource (\as{uniprot}) is a repository containing information about protein sequences and associated information.\newline{\minorfootnotesize\url{https://www.uniprot.org}}\\
+
+\bottomrule
+
+\end{longtable}
+\endgroup
+}

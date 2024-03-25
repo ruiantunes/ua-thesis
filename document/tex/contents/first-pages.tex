@@ -1,0 +1,223 @@
+% Title, Portuguese and English titles, and thesis year.
+\newcommand{\authorname}{Rui Marcos\newline Brandão Antunes}
+
+\newcommand{\englishtitle}{Biomedical information extraction with natural language processing and machine learning methods}
+\newcommand{\portuguesetitle}{Extração de informação biomédica usando processamento de linguagem natural e aprendizagem automática}
+
+\newcommand{\thesisyear}{2023}
+
+% Removing the lines with \setcounter{page} in the titlepage definition
+% to disable page numbering restart.
+% https://tex.stackexchange.com/questions/68699/how-to-avoid-page-numbering-being-re-started-by-titlepage
+% https://tex.stackexchange.com/questions/27543/what-does-the-titlepage-environment-do-and-what-are-its-benefits
+% https://www.tug.org/svn/texlive/trunk/Master/texmf-dist/tex/latex/base/report.cls?view=co
+\makeatletter
+\if@compatibility
+  \renewenvironment{titlepage}
+    {%
+      \if@twocolumn
+        \@restonecoltrue\onecolumn
+      \else
+        \@restonecolfalse\newpage
+      \fi
+      \thispagestyle{empty}%
+      % \setcounter{page}\z@
+    }%
+    {\if@restonecol\twocolumn \else \newpage \fi
+    }
+\else
+  \renewenvironment{titlepage}
+    {%
+      \if@twocolumn
+        \@restonecoltrue\onecolumn
+      \else
+        \@restonecolfalse\newpage
+      \fi
+      \thispagestyle{empty}%
+      % \setcounter{page}\@ne
+    }%
+    {\if@restonecol\twocolumn \else \newpage \fi
+     \if@twoside\else
+        % \setcounter{page}\@ne
+     \fi
+    }
+\fi
+\makeatother
+
+% First pages are numbered A, B, C, ...
+% Also, this avoids wrong back references with the biblatex package.
+\pagenumbering{Alph}
+
+\begingroup
+% Use Helvetica font in the first pages (according to the UA rules).
+% https://tex.stackexchange.com/questions/427245/how-to-use-helvetica-font-in-online-editor
+% \renewfontfamily\sffamily{Arial}
+% \renewfontfamily\sffamily{Arimo}
+% \renewfontfamily\sffamily{Helvetica}
+\renewfontfamily\sffamily{TeX Gyre Heros}
+
+% Cover page.
+\TitlePage
+\HEADER{\BAR}{\thesisyear}
+% \vspace*{7mm}
+\TITLE{\authorname}{\portuguesetitle}
+\vspace*{7mm}
+\TITLE{}{\englishtitle}
+% \TITLE{\orcid}{\englishtitle}
+\EndTitlePage
+
+% Empty page.
+\titlepage\ \endtitlepage
+
+% Initial thesis pages.
+\TitlePage
+\HEADER{}{\thesisyear}
+% \vspace*{7mm}
+\TITLE{\authorname}{\portuguesetitle}
+\vspace*{7mm}
+\TITLE{}{\englishtitle}
+% \TITLE{\orcid}{\englishtitle}
+\vspace*{21mm}
+\TEXT{}{Tese apresentada à Universidade de Aveiro para cumprimento dos requisitos necessários à obtenção do grau de Doutor em Engenharia Eletrotécnica, realizada sob a orientação científica do Doutor Sérgio Guilherme Aleixo de Matos, Professor Auxiliar do Departamento de Eletrónica, Telecomunicações, e Informática da Universidade de Aveiro.}
+\vspace*{7mm}
+\TEXT{}{Thesis presented to the University of Aveiro for fulfillment of the necessary requirements to obtain the degree of Doctor in Electrical Engineering, developed under scientific supervision of the Doctor Sérgio Guilherme Aleixo de Matos, Assistant Professor in the Department of Electronics, Telecommunications and Informatics at the University of Aveiro.}
+\vspace*{21mm}
+\TEXT{}{Trabalho financiado pela Fundação para a Ciência e a Tecnologia~(FCT) no contexto do projeto IF/01694/2013/CP1162/CT0018 e da bolsa de doutoramento SFRH/BD/137000/2018. %\\
+Financiado também pelo Programa Integrado SR\&TD SOCA (Ref.\ CENTRO-01-0145-FEDER-000010), co-financiado pelo programa Centro 2020, Portugal 2020, União Europeia, através do Fundo Europeu de Desenvolvimento Regional.}
+\vspace*{7mm}
+\TEXT{}{%
+\includegraphics[height=2\baselineskip]{img/logos/mctes.pdf}\hfill%
+\includegraphics[height=2\baselineskip]{img/logos/fct.pdf}\\[20pt]%
+\includegraphics[width=\linewidth]{img/logos/feder.pdf}}
+\EndTitlePage
+
+% Empty page.
+\titlepage\ \endtitlepage
+
+% https://en.wikipedia.org/wiki/Academic_ranks_(Portugal_and_Brazil)
+% https://www.eui.eu/ProgrammesAndFellowships/AcademicCareersObservatory/AcademicCareersbyCountry/Portugal
+
+\TitlePage
+\vspace*{55mm}
+\TEXT{\textbf{o júri~/~the jury\newline}}{}
+\TEXT{presidente~/~president}{\textbf{Luís António Ferreira Martins Dias Carlos}\newline{\footnotesize Professor Catedrático da Universidade de Aveiro, Portugal}\newline{\footnotesize Full Professor at the University of Aveiro, Portugal}}
+\vspace*{5mm}
+\TEXT{vogais~/~examiners committee}{\textbf{Francisco José Moreira Couto}\newline{\footnotesize Professor Associado com Agregação da Universidade de Lisboa, Portugal}\newline{\footnotesize Associate Professor with Aggregation at the University of Lisbon, Portugal}}
+\vspace*{5mm}
+\TEXT{}{\textbf{Anália Maria Garcia Lourenço}\newline{\footnotesize Professora Titular da Universidade de Vigo, Espanha}\newline{\footnotesize Associate Professor at the University of Vigo, Spain}}
+\vspace*{5mm}
+\TEXT{}{\textbf{Petia Georgieva Georgieva}\newline{\footnotesize Professora Associada com Agregação da Universidade de Aveiro, Portugal}\newline{\footnotesize Associate Professor with Aggregation at the University of Aveiro, Portugal}}
+\vspace*{5mm}
+\TEXT{}{\textbf{Carla Alexandra Teixeira Lopes}\newline{\footnotesize Professora Auxiliar da Universidade do Porto, Portugal}\newline{\footnotesize Assistant Professor at the University of Porto, Portugal}}
+\vspace*{5mm}
+\TEXT{}{\textbf{Sérgio Guilherme Aleixo de Matos}\newline{\footnotesize Professor Auxiliar da Universidade de Aveiro (orientador), Portugal}\newline{\footnotesize Assistant Professor at the University of Aveiro (supervisor), Portugal}}
+\EndTitlePage
+
+% Empty page.
+\titlepage\ \endtitlepage
+
+% \TitlePage
+% \vspace*{55mm}
+% \TEXT{\textbf{agradecimentos}}{...}
+% \vspace*{5mm}
+% \TEXT{\textbf{acknowledgments}}{...}
+% \EndTitlePage
+%
+% Empty page.
+% \titlepage\ \endtitlepage
+
+% https://tex.stackexchange.com/questions/2229/is-a-period-after-an-abbreviation-the-same-as-an-end-of-sentence-period
+
+\TitlePage
+\vspace*{55mm}
+\TEXT{\textbf{palavras-chave}}{Bioinformática~$\cdot$ Extração de informação~$\cdot$ Processamento de linguagem\newline natural~$\cdot$ Aprendizagem automática~$\cdot$ Desambiguação de conceitos~$\cdot$\newline Classificação de textos $\cdot$ Extração de relações.}
+\vspace*{5mm}
+\TEXT{\textbf{resumo}}{Assistimos a uma sobrecarga de dados textuais: uma quantidade avassaladora de informação é registada em texto de linguagem natural e armazenada em formato digital. Nas áreas ligadas às ciências da vida, o número crescente de publicações científicas no domínio da biomedicina e de relatórios clínicos retém uma riqueza de conhecimento que deve ser descoberto e associado através de métodos automáticos de extração de informação. Estes são essenciais para auxiliar a curadoria em bases de dados biológicos e desempenham um papel importante na descoberta de medicamentos, medicina de precisão, e investigação clínica.\newline Esta tese investiga o uso de processamento de linguagem natural, aprendizagem automática, e métodos baseados em conhecimento para extrair informação a partir de textos biomédicos em língua inglesa. Especificamente, estudamos e propomos métodos para desambiguação de entidades, classificação de documentos, e extração de relações. Em suma, este trabalho contribui com um estudo exaustivo de avaliação de várias abordagens para distintas tarefas de extração de informação biomédica, que são um suporte vital para o avanço do conhecimento atual.}
+\EndTitlePage
+
+% Empty page.
+\titlepage\ \endtitlepage
+
+\TitlePage
+\vspace*{55mm}
+\TEXT{\textbf{keywords}}{Bioinformatics~$\cdot$ Information extraction~$\cdot$ Natural language processing~$\cdot$\newline Machine learning~$\cdot$ Concept disambiguation~$\cdot$ Text classification~$\cdot$\newline Relation extraction.}
+\vspace*{5mm}
+\TEXT{\textbf{abstract}}{We witness an overload of textual data: a vast amount of information is recorded in natural language text and stored in digital media. In the life sciences fields, the increasing number of biomedical scientific publications and of clinical reports retains a wealth of knowledge that must be unearthed and linked through automatic information extraction methods. These are imperative to assist curation in biological databases and play an important role in drug discovery, precision medicine, and pharmacological and clinical research.\newline This thesis investigates the use of natural language processing, machine learning, and knowledge-based methods to extract information from biomedical text in English language. Specifically, we study and propose methods for entity disambiguation, document classification, and relation extraction. Overall, this work contributes with an exhaustive evaluation study of several approaches for distinct biomedical information extraction tasks, which are a vital support for the advancement of the current knowledge.}
+\EndTitlePage
+
+% Empty page.
+\titlepage\ \endtitlepage
+
+% End of Helvetica font.
+\endgroup
+
+% Specifying header content. In this case it only shows chapter
+% information: left position at even pages, right position at odd pages.
+\setlength\headheight{16pt}
+\pagestyle{fancy}
+% \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+\fancyhf{}
+% \fancyhead[LE,RO]{\fontsize{12}{14.4}\textbf{\thepage}}
+\fancyhead[LE,RO]{\fontsize{12}{14.4}\thepage}
+% \fancyhead[RE]{\fontsize{12}{14.4}\textsl{\leftmark}}
+% \fancyhead[LO]{\fontsize{12}{14.4}\textsl{\rightmark}}
+\fancyhead[LO,RE]{\fontsize{12}{14.4}\textsc{\nouppercase{\leftmark}}}
+
+% To change the font size of the page numbering in all pages.
+% \fancyfoot[C]{\small\thepage}
+
+% From the "fancyhdr" package documentation.
+% "Some LATEX commands, like \chapter, use the \thispagestyle command to
+% automatically switch to the plain page style, thus ignoring the page
+% style currently in effect."
+
+% The "fancyhdr" packages does not apply same header/footer on chapter
+% and non-chapter pages.
+% https://tex.stackexchange.com/questions/117328/fancyhdr-does-not-apply-same-header-footer-on-chapter-and-non-chapter-pages
+
+\fancypagestyle{plain}{%
+% Clear all header and footer fields.
+\fancyhf{}
+% \fancyhead[LE,RO]{\fontsize{12}{14.4}\textbf{\thepage}}
+\fancyhead[LE,RO]{\fontsize{12}{14.4}\thepage}
+% \fancyfoot[LE,RO]{\fontsize{12}{14.4}\thepage}
+% \fancyhead[LO,RE]{\fontsize{12}{14.4}\textsc{\leftmark}}
+% Except the center.
+% \fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+}
+
+% To specify 1x or 1.5x vertical spacing between lines.
+%\singlespacing
+\onehalfspacing
+
+% Tables of contents, of figures, of tables.
+
+% To count the following pages with roman numbering.
+\pagenumbering{roman}
+
+\tableofcontents
+\cleardoublepage
+
+\listoffigures
+\cleardoublepage
+
+\listoftables
+\cleardoublepage
+
+\begingroup
+% To locally reduce vertical space between entries.
+\setlist{itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt}
+\printnoidxglossary
+\endgroup
+\cleardoublepage
+
+% To specify 1x or 1.5x vertical spacing between lines.
+% \singlespacing
+% \onehalfspacing
+
+% The chapters.
+
+% To count the following pages with arabic numerals.
+\pagenumbering{arabic}

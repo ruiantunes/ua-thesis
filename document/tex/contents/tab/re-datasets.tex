@@ -1,0 +1,163 @@
+\begingroup
+\normalfont
+\color{black}
+\singlespacing
+
+\newcommand{\z}{\hspace*{0.5em}}
+\newcommand{\minorsmall}{\fontsize{10.0pt}{12.0pt}\selectfont}
+% \newcommand{\minorsmall}{\fontsize{10.5pt}{12.6pt}\selectfont}
+% \newcommand{\minorfootnotesize}{\fontsize{9.7pt}{11.64pt}\selectfont}
+
+% https://tex.stackexchange.com/questions/446919/longtable-midrule-after-newpage
+
+% \small
+
+\begin{longtable}[c]{E{0.30\textwidth}p{0.62\textwidth}}%
+\endfirsthead
+\toprule
+% \textbf{Resource} & \textbf{Description}\\
+Resource & Description\\
+\midrule
+\endhead
+
+\caption[Datasets for biomedical relation extraction.]{Datasets for biomedical relation extraction, presented in chronological order. ADE: adverse drug effect. CDR: chemical--disease relation. DDI: drug--drug interaction. IPS: interaction pair subtask. PPI: protein--protein interaction.}
+\label{tab:re-datasets}\\
+
+\toprule
+
+% \textbf{Resource} & \textbf{Description}\\
+Resource & Description\\
+
+\midrule
+
+BioText\newline
+\z{\minorsmall\parencite{rosario2004a}}
+&
+This dataset concentrates on disease--treatment semantic relations (\textit{cure}, \textit{prevent}, or \textit{side effect}) using biomedical text found in the titles and abstracts from the \as{medline} 2001 database.
+An annotator with a biological background performed the labeling.
+\newline
+{\footnotesize\url{https://biotext.berkeley.edu/data/dis_treat_data.html}}
+\\
+
+\midrule
+
+AIMed\newline
+\z{\minorsmall\parencite{bunescu2005b}}\newline
+\z{\minorsmall\parencite{bunescu2005c}}\newline
+\z{\minorsmall\parencite{bunescu2007a}}
+&
+The corpus is annotated with human protein names (genes and proteins are interchangeable) and their interactions.
+It consists of 225 \as{medline} abstracts, containing 4084 protein mentions and around 1000 interactions.
+\newline
+{\footnotesize\url{https://www.cs.utexas.edu/ftp/mooney/bio-data/}}
+\\
+
+\midrule
+
+BioInfer\newline
+\z{\minorsmall\parencite{pyysalo2007a}}
+&
+The resource contains 1100 sentences from abstracts of biomedical research articles. These are annotated with named entities of the protein, gene, and \as{rna} types, their relationships, and syntactic dependencies. The corpus contains a total of 6349 entities and 2662 relationships.
+% \newline
+% {\footnotesize\url{https://bionlp.utu.fi/bioinfer.html}}
+\\
+
+\midrule
+
+BioCreative~II PPI IPS\newline
+\z{\minorsmall\parencite{krallinger2007a}}\newline
+\z{\minorsmall\parencite{krallinger2008b}}
+&
+A corpus of full-text articles annotated with binary protein--protein interaction pairs. It is split into two sets: a \textit{training} collection of 740 articles and a smaller \textit{test} set of 358 articles.
+\newline
+{\footnotesize\url{http://biocreative.sourceforge.net/bc2_ppi_ips.html}}
+\\
+
+\midrule
+
+2010 i2b2/VA Challenge\newline
+\z{\minorsmall\parencite{uzuner2011a}}
+&
+A corpus of patient reports focused on medical concept extraction and relation classification between medical problems, tests, and treatments. It contains a total of 394 \textit{training} reports and 477 \textit{test} reports manually annotated.\newline
+{\footnotesize\url{https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/}}
+\\
+
+\midrule
+
+ADE corpus\newline
+\z{\minorsmall\parencite{gurulingappa2012a}}\newline
+\z{\minorsmall\parencite{gurulingappa2012b}}
+&
+A corpus containing 2972 \as{medline} case reports annotated with two types of relations: drug-related adverse events (signs, symptoms, diseases, disorders, and others) and drug--dosage information (such as quantitative measurements or frequency mentions).\newline
+{\footnotesize\url{https://sites.google.com/site/adecorpus/}}
+\\
+
+\midrule
+
+DDI corpus\newline
+\z{\minorsmall\parencite{herrerozazo2013a}}\newline
+\z{\minorsmall\parencite{segurabedmar2013a}}\newline
+\z{\minorsmall\parencite{segurabedmar2014a}}
+&
+A corpus containing 792 texts from the DrugBank database and other 233 \as{pubmed} abstracts. These are annotated with 18\,502 pharmacological substances and 5028 drug--drug interactions.\newline
+{\footnotesize\url{https://github.com/isegura/DDICorpus}}
+\\
+
+\midrule
+
+CDR corpus\newline
+\z{\minorsmall\parencite{li2016b}}
+&
+A collection of 1500 \as{pubmed} abstracts manually annotated with 3116 chemical--disease relations and the respective named entities (4409 chemicals and 5818 diseases). The entity annotations also contain normalized \as{mesh} concept identifiers.\newline
+{\footnotesize\url{https://biocreative.bioinformatics.udel.edu/tasks/biocreative-v/track-3-cdr/}}
+\\
+
+\midrule
+
+ChemProt\newline
+\z{\minorsmall\parencite{krallinger2017a}}
+&
+It contains a total of 2432 PubMed abstracts split into \textit{training}, \textit{development}, and \textit{test} subsets. With 31\,831 chemical and 30\,316 protein annotations, there are a total of 15\,739 chemical--protein interactions. Five different relation types are annotated: \textit{activation}, \textit{inhibition}, \textit{agonist}, \textit{antagonist}, and \textit{substrate}.\newline
+{\footnotesize\url{https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vi/track-5/}}
+\\
+
+\midrule
+
+2018 n2c2 Track 2\newline
+\z{\minorsmall\parencite{henry2019a}}
+&
+A collection of 505 narrative discharge summaries from the \as{mimic}-III clinical care database. These are annotated with concepts related to medications (strengths and dosages, duration and frequency of administration, route of administration, reason for administration, and adverse drug effects), and interactions between them. There are a total of 83\,869 named entities and 59\,810 relations.\newline
+{\footnotesize\url{https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/}}
+\\
+
+\midrule
+
+DrugProt\newline
+\z{\minorsmall\parencite{miranda2021a}}
+&
+Built from the existing ChemProt corpus, it includes more PubMed abstracts and is also split into three subsets (\textit{training}, \textit{development}, and \textit{test}). A total of 3500 documents with over 100 thousand annotated entities and interactions. Moreover, it contains more relation types---a total of 13 distinct chemical--protein interactions.\newline
+{\footnotesize\url{https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vii/track-1/}}
+\\
+
+\midrule
+
+BioRED\newline
+\z{\minorsmall\parencite{luo2022b}}
+&
+This corpus contains a set of 600 \as{pubmed} abstracts annotated with multiple entity types (genes, diseases, chemicals) and relation pairs (such as gene--disease and chemical--chemical). Each relation is further labeled as describing either a novel finding or background knowledge. It contains a total of 20\,419 entity mentions and 6503 relations.\newline
+{\footnotesize\url{https://ftp.ncbi.nlm.nih.gov/pub/lu/BioRED/}}
+\\
+
+\midrule
+
+ChemDisGene\newline
+\z{\minorsmall\parencite{zhang2022b}}
+&
+A distant supervision corpus for extracting multi-class multi-label relations between chemicals, diseases, and genes. The dataset contains around 80 thousand \as{pubmed} abstracts and is split into two portions: (1) one curated by human experts intended for \textit{evaluation} containing 523 documents, and (2) another intended for \textit{training} which was distantly labeleled via the Comparative Toxicogenomics Database (\as{ctd}). The dataset is annotated with 18 relation types.\newline
+{\footnotesize\url{https://github.com/chanzuckerberg/ChemDisGene}}
+\\
+
+\bottomrule
+
+\end{longtable}
+\endgroup

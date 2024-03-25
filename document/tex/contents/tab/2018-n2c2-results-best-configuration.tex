@@ -1,0 +1,75 @@
+\begingroup
+
+\newcommand{\methodA}{\textsf{AdaBoostClassifier} with 100 additional training \as{mimic} reports}
+\newcommand{\methodB}{Rule-based classifier}
+\newcommand{\methodC}{Modified rule-based classifier}
+\newcommand{\methodD}{Modified rule-based classifier}
+\newcommand{\methodE}{Modified rule-based classifier}
+\newcommand{\methodF}{Rule-based classifier}
+\newcommand{\methodG}{Modified rule-based classifier}
+\newcommand{\methodH}{Modified rule-based classifier}
+\newcommand{\methodI}{Modified rule-based classifier}
+\newcommand{\methodJ}{Rule-based classifier}
+\newcommand{\methodK}{\textsf{GradientBoostingClassifier} with tabulated information discarded}
+\newcommand{\methodL}{Modified rule-based classifier}
+\newcommand{\methodM}{Modified rule-based classifier}
+
+% \renewcommand*{\arraystretch}{1.5}
+\setlength\tabcolsep{4.0pt}
+
+\newcommand{\minorfootnotesize}{\fontsize{9.5pt}{11.4pt}\selectfont}
+% \newcommand{\minorfootnotesize}{\fontsize{9.4pt}{11.28pt}\selectfont}
+% \newcommand{\minorfootnotesize}{\fontsize{9.3pt}{11.16pt}\selectfont}
+% \newcommand{\minorfootnotesize}{\fontsize{9.2pt}{11.04pt}\selectfont}
+% \newcommand{\minorfootnotesize}{\fontsize{9.0pt}{10.8pt}\selectfont}
+
+\begin{table}[!t]
+
+\caption%
+[Overall averaged F1-scores in the 2018 \as{n2c2} Track~1 dataset with the best combination of methods selected by inspecting the evaluation in the training set.]%
+{Overall averaged F1-scores in the 2018 \as{n2c2} Track~1 dataset with the best combination of methods selected by inspecting the evaluation in the training set. The methods that provided the best results in the training set were applied. The highest value for each tag is highlighted in bold.}
+\label{tab:2018-n2c2-results-best-configuration}
+
+\centering
+
+% \small
+% \footnotesize
+\minorfootnotesize
+% \scriptsize
+% \minorscriptsize
+% \tiny
+
+\begin{tabular}{llrr}
+
+\toprule
+
+Selected method & Tag & \multicolumn{1}{l}{Training} & \multicolumn{1}{l}{Test}\\
+
+\cmidrule(r{0.25em}){1-1}\cmidrule(l{0.25em}r{0.25em}){2-2}\cmidrule(l{0.25em}r{0.25em}){3-3}\cmidrule(l{0.25em}){4-4}
+
+% \midrule
+
+\methodA & \textsf{ABDOMINAL}       & 0.6669          & \textbf{0.7511}\\
+\methodB & \textsf{ADVANCED-CAD}    & \textbf{0.8251} & 0.8089\\
+\methodC & \textsf{ALCOHOL-ABUSE}   & \textbf{1.0000} & 0.4850\\
+\methodD & \textsf{ASP-FOR-MI}      & \textbf{0.8625} & 0.7426\\
+\methodE & \textsf{CREATININE}      & \textbf{0.9118} & 0.7862\\
+\methodF & \textsf{DIETSUPP-2MOS}   & \textbf{0.7975} & 0.7943\\
+\methodG & \textsf{DRUG-ABUSE}      & \textbf{1.0000} & 0.9255\\
+\methodH & \textsf{ENGLISH}         & \textbf{1.0000} & 0.6554\\
+\methodI & \textsf{HBA1C}           & \textbf{0.9601} & 0.8439\\
+\methodJ & \textsf{KETO-1YR}        & \textbf{0.5000} & 0.4971\\
+\methodK & \textsf{MAJOR-DIABETES}  & 0.7725          & \textbf{0.8604}\\
+\methodL & \textsf{MAKES-DECISIONS} & \textbf{1.0000} & 0.4911\\
+\methodM & \textsf{MI-6MOS}         & \textbf{0.8778} & 0.8102\\
+
+\cmidrule(l{0.25em}r{0.25em}){2-2}\cmidrule(l{0.25em}r{0.25em}){3-3}\cmidrule(l{0.25em}){4-4}
+
+& Micro-averaged & \textbf{0.9143} & 0.8844\\
+& Macro-averaged & \textbf{0.8596} & 0.7271\\
+
+\bottomrule
+
+\end{tabular}
+\end{table}
+\endgroup

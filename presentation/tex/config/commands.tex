@@ -1,0 +1,92 @@
+\newcommand{\ccmark}{\color{mLightGreen}\cmark}
+\newcommand{\cxmark}{\color{Firebrick3}\xmark}
+% Firebrick3: c6262c
+
+% Declaring variables as math text alphabets.
+% https://tex.stackexchange.com/questions/553236/how-do-i-format-words-as-variable-names
+% Normal variable.
+\newcommand\var[1]{\mathop{\mathrm{#1}}\nolimits}
+% Vector variable.
+\newcommand\varvec[1]{\mathop{\mathbf{#1}}\nolimits}
+
+% https://tex.stackexchange.com/questions/74459/remove-space-before-colorbox
+\newcommand{\reducedstrut}{\vrule width 0pt height .9\ht\strutbox depth .9\dp\strutbox\relax}
+\newcommand{\cb}[2]{%
+% \setlength{\fboxsep}{0pt}%
+\colorbox{#1}{\reducedstrut#2}%
+}
+
+\newcommand{\chemical}[1]{%
+\cb{red!20}{#1}%
+}
+
+\newcommand{\protein}[1]{%
+\cb{green!20}{#1}%
+}
+
+% Remove unwanted vertical space produced from the \color command.
+% https://tex.stackexchange.com/questions/58424/using-color-before-flushleft-adds-vertical-space
+\newcommand{\blue}[1]{%
+\leavevmode{\color{blue}#1}%
+}
+
+\newcommand{\red}[1]{%
+\leavevmode{\color{red}#1}%
+}
+
+\newcommand{\chemicaltext}[1]{%
+\leavevmode{\color{chemical}#1}%
+}
+
+\newcommand{\proteintext}[1]{%
+\leavevmode{\color{protein}#1}%
+}
+
+% \newcommand{\todo}{%
+% {\huge\red{\textbf{To do...}}}\bigskip%
+% }
+
+\newcommand{\CurrentProgressBarIs}{}
+
+\newcommand{\OneOfFive}{%
+{\color{mLightBrown}\rule{0.192\textwidth}{2.0pt}}\hspace{0.01\textwidth}%
+\raisebox{0.5pt}{\color{mDarkTeal}%
+\rule{0.192\textwidth}{1.0pt}\hspace{0.01\textwidth}%
+\rule{0.192\textwidth}{1.0pt}\hspace{0.01\textwidth}%
+\rule{0.192\textwidth}{1.0pt}\hspace{0.01\textwidth}%
+\rule{0.192\textwidth}{1.0pt}%
+}}
+
+\newcommand{\TwoOfFive}{%
+{\color{mDarkTeal}\rule{0.192\textwidth}{2.0pt}\hspace{0.01\textwidth}}%
+{\color{mLightBrown}\rule{0.192\textwidth}{2.0pt}}\hspace{0.01\textwidth}%
+\raisebox{0.5pt}{\color{mDarkTeal}%
+\rule{0.192\textwidth}{1.0pt}\hspace{0.01\textwidth}%
+\rule{0.192\textwidth}{1.0pt}\hspace{0.01\textwidth}%
+\rule{0.192\textwidth}{1.0pt}%
+}}
+
+\newcommand{\ThreeOfFive}{%
+{\color{mDarkTeal}\rule{0.192\textwidth}{2.0pt}\hspace{0.01\textwidth}%
+\rule{0.192\textwidth}{2.0pt}\hspace{0.01\textwidth}}%
+{\color{mLightBrown}\rule{0.192\textwidth}{2.0pt}}\hspace{0.01\textwidth}%
+\raisebox{0.5pt}{\color{mDarkTeal}%
+\rule{0.192\textwidth}{1.0pt}\hspace{0.01\textwidth}%
+\rule{0.192\textwidth}{1.0pt}%
+}}
+
+\newcommand{\FourOfFive}{%
+{\color{mDarkTeal}\rule{0.192\textwidth}{2.0pt}\hspace{0.01\textwidth}%
+\rule{0.192\textwidth}{2.0pt}\hspace{0.01\textwidth}%
+\rule{0.192\textwidth}{2.0pt}\hspace{0.01\textwidth}}%
+{\color{mLightBrown}\rule{0.192\textwidth}{2.0pt}}\hspace{0.01\textwidth}%
+\raisebox{0.5pt}{\color{mDarkTeal}%
+\rule{0.192\textwidth}{1.0pt}%
+}}
+
+\newcommand{\FiveOfFive}{%
+{\color{mDarkTeal}\rule{0.192\textwidth}{2.0pt}\hspace{0.01\textwidth}%
+\rule{0.192\textwidth}{2.0pt}\hspace{0.01\textwidth}%
+\rule{0.192\textwidth}{2.0pt}\hspace{0.01\textwidth}%
+\rule{0.192\textwidth}{2.0pt}\hspace{0.01\textwidth}}%
+{\color{mLightBrown}\rule{0.192\textwidth}{2.0pt}}}
